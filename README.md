@@ -9,7 +9,6 @@ https://colab.research.google.com/drive/1h7X8BPx6EP-csB92BLYXb9JJLl-v1PnF#scroll
 -review Anna's existing detection methods and integrate them into our ensemble detection
 -Collect baseline result
 
-#previously, me and you calculating historical gradients for your functions. WE already have list of historical gradients; 
 Anna:
 https://colab.research.google.com/drive/1KYY8VZuFyUnQUPdiymANRI82_9iFqPK5?usp=sharing
 -has done detection via feature. She will continue with her projectory calculation
