@@ -5,9 +5,10 @@ Federated learning project:
 
 Josh:
 https://colab.research.google.com/drive/1h7X8BPx6EP-csB92BLYXb9JJLl-v1PnF#scrollTo=GsJXESEctevc
--implement other attack detection methods
--review Anna's existing detection methods and integrate them into our ensemble detection
--Collect baseline result
+
+-refer to Anna's notebook for updated type 1 attack in terms of correctness
+-resolve bug that happens when training on attack 3 
+-test grad norm detection on type 1 and 2 attacks
 
 Anna:
 https://colab.research.google.com/drive/1KYY8VZuFyUnQUPdiymANRI82_9iFqPK5?usp=sharing
