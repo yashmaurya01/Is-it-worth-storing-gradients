@@ -5,10 +5,13 @@ Federated learning project:
 
 Josh:
 https://colab.research.google.com/drive/1h7X8BPx6EP-csB92BLYXb9JJLl-v1PnF#scrollTo=GsJXESEctevc
+#old code for experiment
+https://colab.research.google.com/drive/1Nug4qGqRgUn6k6UXhQAWZiQXYI1LzdmQ#scrollTo=8QaUV0L_OhXA
+#AIJack: latest code
 
--refer to Anna's notebook for updated type 1 attack in terms of correctness
--resolve bug that happens when training on attack 3 
--test grad norm detection on type 1 and 2 attacks
+*push my code
+*keep adding more code that can be used for Yash's end 
+
 
 Anna:
 https://colab.research.google.com/drive/1tbNp_TaqKp7uQs0L2hlCrS8qOHCiyNY5#scrollTo=dCk7GCi_ROOJ&uniqifier=1
