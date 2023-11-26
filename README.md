@@ -26,6 +26,6 @@ https://www.kaggle.com/code/yashmaurya/privacy-fl-project-experiment \
 \
 -Testing attacks on ShapleyFL\
 -Using DP-SGD for local client privacy\
--Using DC-GAN for Private Synthetic Data Generation for privately sharing test dataset with server
+-Using DC-GAN for Private Synthetic Data Generation for privately sharing test dataset with server\
 \
-Integrating Josh's code with ShapleyFL
+-Integrating Josh's code with ShapleyFL
