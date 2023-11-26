@@ -20,7 +20,6 @@ https://colab.research.google.com/drive/1tbNp_TaqKp7uQs0L2hlCrS8qOHCiyNY5#scroll
 Yash:
 https://www.kaggle.com/yashmaurya/fl-project-experiments \
 https://www.kaggle.com/code/yashmaurya/privacy-fl-project-experiment \
-https://www.kaggle.com/code/yashmaurya/attack-fl-project-experiments \
 
 -Contribution repo working\
 -Implement DP-SGD and how that affects performance while the attack is going on\
@@ -28,3 +27,5 @@ https://www.kaggle.com/code/yashmaurya/attack-fl-project-experiments \
 -Testing attacks on ShapleyFL\
 -Using DP-SGD for local client privacy\
 -Using DC-GAN for Private Synthetic Data Generation for privately sharing test dataset with server
+\
+Integrating Josh's code with ShapleyFL
