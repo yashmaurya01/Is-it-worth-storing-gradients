@@ -28,4 +28,9 @@ https://www.kaggle.com/code/yashmaurya/privacy-fl-project-experiment \
 -Using DP-SGD for local client privacy\
 -Using DC-GAN for Private Synthetic Data Generation for privately sharing test dataset with server\
 \
--Integrating Josh's code with ShapleyFL
+-Integrating Josh's code with ShapleyFL\
+\
+To add privacy to existing frameworks:
+1) Use DPSGD (Fed Avg vs ShapleyFL) (Gradients safe)
+2) Private synthetic test data (Fed Avg vs ShapleyFL) (Validation data shared to server is now secure) (Previously public dataset was required for validation on server end)
+3) DPSGD + Private synthetic test data (Fed Avg vs ShapleyFL) (Everything private)
