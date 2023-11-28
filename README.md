@@ -33,7 +33,7 @@ https://www.kaggle.com/code/yashmaurya/privacy-fl-project-experiment \
 To add privacy to existing frameworks:
 1) Use DPSGD (Fed Avg vs ShapleyFL) (Gradients safe)
 2) Private synthetic test data (Fed Avg vs ShapleyFL) (Validation data shared to server is now secure) (Previously public dataset was required for validation on server end)
-3) DPSGD + Private synthetic test data (Fed Avg vs ShapleyFL) (Everything private)
+3) DPSGD + Private synthetic test data (Fed Avg vs ShapleyFL) (Everything private) \
 \
 https://www.kaggle.com/code/yashmaurya/private-shapleyfl (Still need to test out dpsgd and setup privacy accounting)\
 https://www.kaggle.com/code/yashmaurya/dp-dcgan-mnist (Need to tune it)
