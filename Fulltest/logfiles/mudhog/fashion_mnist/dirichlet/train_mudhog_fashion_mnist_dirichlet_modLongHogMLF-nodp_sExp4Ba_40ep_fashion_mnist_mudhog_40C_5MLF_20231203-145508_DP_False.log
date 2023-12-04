@@ -1,0 +1,1875 @@
+2023-12-03 14:55:08,115 INFO _main.py 38:: ################################################################
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                              batch_size: 64                  #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                      dp: False               #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                         test_batch_size: 64                  #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                  epochs: 40                  #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                               optimizer: SGD                 #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                      lr: 0.01                #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                momentum: 0.9                 #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                            weight_decay: 0.0001              #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                    seed: 1                   #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                            log_interval: 11                  #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                             num_clients: 40                  #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                           output_folder: experiments         #
+2023-12-03 14:55:08,115 INFO _main.py 40:: #                                 dataset: fashion_mnist       #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                             loader_type: dirichlet           #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                             loader_path: ./data/loader.pk    #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                                      AR: mudhog              #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                     n_attacker_backdoor: 0                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                        backdoor_trigger: [0, 0, 1, 1]        #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #             n_attacker_semanticBackdoor: 0                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                n_attacker_labelFlipping: 0                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #     n_attacker_labelFlippingDirectional: 0                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                   n_attacker_omniscient: 0                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                        omniscient_scale: 1                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                                 attacks: None                #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                      save_model_weights: False               #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                         experiment_name: modLongHogMLF-nodp_sExp4Ba_40ep_fashion_mnist_mudhog_40C_5MLF#
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                          path_to_aggNet: None                #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                                  device: cuda                #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                            inner_epochs: 4                   #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                                 verbose: True                #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                         list_unreliable: [2, 18, 20]         #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                     unreliable_fraction: 0.5                 #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                    unreliable_fracTrain: 0.3                 #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                         mean_unreliable: 0.0                 #
+2023-12-03 14:55:08,116 INFO _main.py 40:: #                             blur_method: gaussian_smooth     #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                      max_std_unreliable: 30.0                #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                     list_uatk_add_noise: [24, 25, 26]        #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                          mean_add_noise: 0.0                 #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                           std_add_noise: 0.01                #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                     list_uatk_flip_sign: [0, 10, 11]         #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                list_tatk_label_flipping: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #          list_tatk_multi_label_flipping: [17, 29, 6, 8, 23]  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                           source_labels: [1, 2, 3]           #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                            target_label: 7                   #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                      list_tatk_backdoor: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                  attacker_list_backdoor: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #          attacker_list_semanticBackdoor: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #             attacker_list_labelFlipping: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #  attacker_list_labelFlippingDirectional: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 40:: #                attacker_list_omniscient: []                  #
+2023-12-03 14:55:08,117 INFO _main.py 41:: ################################################################
+2023-12-03 14:55:08,117 INFO _main.py 42:: Namespace(AR='mudhog', attacker_list_backdoor=array([], dtype=int64), attacker_list_labelFlipping=array([], dtype=int64), attacker_list_labelFlippingDirectional=array([], dtype=int64), attacker_list_omniscient=array([], dtype=int64), attacker_list_semanticBackdoor=array([], dtype=int64), attacks=None, backdoor_trigger=[0, 0, 1, 1], batch_size=64, blur_method='gaussian_smooth', dataset='fashion_mnist', device='cuda', dp=False, epochs=40, experiment_name='modLongHogMLF-nodp_sExp4Ba_40ep_fashion_mnist_mudhog_40C_5MLF', inner_epochs=4, list_tatk_backdoor=[], list_tatk_label_flipping=[], list_tatk_multi_label_flipping=[17, 29, 6, 8, 23], list_uatk_add_noise=[24, 25, 26], list_uatk_flip_sign=[0, 10, 11], list_unreliable=[2, 18, 20], loader_path='./data/loader.pk', loader_type='dirichlet', log_interval=11, lr=0.01, max_std_unreliable=30.0, mean_add_noise=0.0, mean_unreliable=0.0, momentum=0.9, n_attacker_backdoor=0, n_attacker_labelFlipping=0, n_attacker_labelFlippingDirectional=0, n_attacker_omniscient=0, n_attacker_semanticBackdoor=0, num_clients=40, omniscient_scale=1, optimizer='SGD', output_folder='experiments', path_to_aggNet=None, save_model_weights=False, seed=1, source_labels=[1, 2, 3], std_add_noise=0.01, target_label=7, test_batch_size=64, unreliable_fracTrain=0.3, unreliable_fraction=0.5, verbose=True, weight_decay=0.0001)
+2023-12-03 14:55:08,118 INFO _main.py 43:: #####################
+2023-12-03 14:55:08,118 INFO _main.py 44:: #####################
+2023-12-03 14:55:08,118 INFO _main.py 45:: #####################
+2023-12-03 14:55:08,118 INFO _main.py 46:: Aggregation Rule:	mudhog
+2023-12-03 14:55:08,118 INFO _main.py 47:: Data distribution:	dirichlet
+2023-12-03 14:55:08,118 INFO _main.py 48:: Attacks:	None 
+2023-12-03 14:55:08,118 INFO _main.py 49:: #####################
+2023-12-03 14:55:08,118 INFO _main.py 50:: #####################
+2023-12-03 14:55:08,118 INFO _main.py 51:: #####################
+2023-12-03 14:55:08,180 INFO server.py 355:: SET DBSCAN eps=1.3, min_samples=5
+2023-12-03 14:55:08,182 INFO _main.py 132:: [1-normal, 0-malicious] label =tensor([0., 1., 1., 1., 1., 1., 0., 1., 0., 1., 0., 0., 1., 1., 1., 1., 1., 0.,
+        1., 1., 1., 1., 1., 0., 0., 0., 0., 1., 1., 0., 1., 1., 1., 1., 1., 1.,
+        1., 1., 1., 1.])
+2023-12-03 14:55:08,188 INFO clients_attackers.py 206:: init ATTACK OMNISCIENT Client 0
+2023-12-03 14:55:08,197 INFO clients_attackers.py 18:: init UNRELIABLE Client 2
+2023-12-03 14:55:08,249 INFO clients_attackers.py 72:: init ATTACK MULTI-LABEL-FLIPPING, change label [1, 2, 3] to 7 Client 6
+2023-12-03 14:55:08,261 INFO clients_attackers.py 72:: init ATTACK MULTI-LABEL-FLIPPING, change label [1, 2, 3] to 7 Client 8
+2023-12-03 14:55:08,277 INFO clients_attackers.py 206:: init ATTACK OMNISCIENT Client 10
+2023-12-03 14:55:08,283 INFO clients_attackers.py 206:: init ATTACK OMNISCIENT Client 11
+2023-12-03 14:55:08,315 INFO clients_attackers.py 72:: init ATTACK MULTI-LABEL-FLIPPING, change label [1, 2, 3] to 7 Client 17
+2023-12-03 14:55:08,322 INFO clients_attackers.py 18:: init UNRELIABLE Client 18
+2023-12-03 14:55:08,334 INFO clients_attackers.py 18:: init UNRELIABLE Client 20
+2023-12-03 14:55:08,353 INFO clients_attackers.py 72:: init ATTACK MULTI-LABEL-FLIPPING, change label [1, 2, 3] to 7 Client 23
+2023-12-03 14:55:08,362 INFO clients_attackers.py 239:: init ATTACK ADD NOISE TO GRAD Client 24
+2023-12-03 14:55:08,369 INFO clients_attackers.py 239:: init ATTACK ADD NOISE TO GRAD Client 25
+2023-12-03 14:55:08,375 INFO clients_attackers.py 239:: init ATTACK ADD NOISE TO GRAD Client 26
+2023-12-03 14:55:08,389 INFO clients_attackers.py 72:: init ATTACK MULTI-LABEL-FLIPPING, change label [1, 2, 3] to 7 Client 29
+2023-12-03 14:55:08,452 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:55:14,230 INFO server.py 210:: [Server] Test set: Average loss: 2.3031, Accuracy: 1000/10000 (10.0%)
+
+2023-12-03 14:55:14,231 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.]])
+2023-12-03 14:55:14,232 INFO server.py 229:: [Server] Precision=[nan nan nan nan 0.1 nan nan nan nan nan],
+ Recall=[0. 0. 0. 0. 1. 0. 0. 0. 0. 0.],
+ F1-score=[       nan        nan        nan        nan 0.18181819        nan
+        nan        nan        nan        nan],
+ my_accuracy=10.000000149011612[%]
+2023-12-03 14:55:14,232 INFO _main.py 228:: ########EPOCH 0 ########
+2023-12-03 14:55:14,233 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:55:56,027 INFO server.py 728:: clients' sizes=[12, 12, 4, 16, 9, 18, 12, 27, 16, 10, 7, 10, 8, 14, 6, 9, 10, 16, 4, 15, 10, 10, 9, 14, 5, 7, 6, 10, 22, 10, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=450
+2023-12-03 14:55:56,091 INFO server.py 298:: [Server] The aggregation takes 0.163231 seconds.
+
+2023-12-03 14:55:56,092 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:55:58,391 INFO server.py 210:: [Server] Test set: Average loss: 2.3056, Accuracy: 1000/10000 (10.0%)
+
+2023-12-03 14:55:58,392 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.],
+        [   0.,    0.,    0.,    0., 1000.,    0.,    0.,    0.,    0.,    0.]])
+2023-12-03 14:55:58,393 INFO server.py 229:: [Server] Precision=[nan nan nan nan 0.1 nan nan nan nan nan],
+ Recall=[0. 0. 0. 0. 1. 0. 0. 0. 0. 0.],
+ F1-score=[       nan        nan        nan        nan 0.18181819        nan
+        nan        nan        nan        nan],
+ my_accuracy=10.000000149011612[%]
+2023-12-03 14:55:58,393 INFO _main.py 228:: ########EPOCH 1 ########
+2023-12-03 14:55:58,393 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:56:41,149 INFO server.py 728:: clients' sizes=[12, 12, 4, 16, 9, 18, 12, 27, 16, 10, 7, 10, 8, 14, 6, 9, 10, 16, 4, 15, 10, 10, 9, 14, 5, 7, 6, 10, 22, 10, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=450
+2023-12-03 14:56:41,208 INFO server.py 298:: [Server] The aggregation takes 0.127589 seconds.
+
+2023-12-03 14:56:41,214 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:56:43,523 INFO server.py 210:: [Server] Test set: Average loss: 2.2978, Accuracy: 1944/10000 (19.44%)
+
+2023-12-03 14:56:43,524 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[  0.,   0.,   0.,   0., 973.,   0.,   0.,  27.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 967.,   0.,   0.,  33.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 981.,   0.,   0.,  19.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 943.,   0.,   0.,  57.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 990.,   0.,   0.,  10.,   0.,   0.],
+        [  0.,   0.,   0.,   0.,  55.,   0.,   0., 945.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 963.,   0.,   0.,  37.,   0.,   0.],
+        [  0.,   0.,   0.,   0.,  46.,   0.,   0., 954.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 958.,   0.,   0.,  42.,   0.,   0.],
+        [  0.,   0.,   0.,   0., 531.,   0.,   0., 469.,   0.,   0.]])
+2023-12-03 14:56:43,525 INFO server.py 229:: [Server] Precision=[       nan        nan        nan        nan 0.13365735        nan
+        nan 0.3679136         nan        nan],
+ Recall=[0.    0.    0.    0.    0.99  0.    0.    0.954 0.    0.   ],
+ F1-score=[       nan        nan        nan        nan 0.23551802        nan
+        nan 0.53103256        nan        nan],
+ my_accuracy=19.439999759197235[%]
+2023-12-03 14:56:43,525 INFO _main.py 228:: ########EPOCH 2 ########
+2023-12-03 14:56:43,525 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:57:25,619 INFO server.py 728:: clients' sizes=[12, 12, 4, 16, 9, 18, 12, 27, 16, 10, 7, 10, 8, 14, 6, 9, 10, 16, 4, 15, 10, 10, 9, 14, 5, 7, 6, 10, 22, 10, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=450
+2023-12-03 14:57:25,678 INFO server.py 298:: [Server] The aggregation takes 0.143761 seconds.
+
+2023-12-03 14:57:25,685 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:57:27,996 INFO server.py 210:: [Server] Test set: Average loss: 1.9125, Accuracy: 4443/10000 (44.43%)
+
+2023-12-03 14:57:27,997 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[611.,   0.,   0.,   0., 112., 121., 107.,  38.,  11.,   0.],
+        [494.,  21.,   0.,   0.,  21.,  92., 223., 148.,   1.,   0.],
+        [  7.,   0.,   0.,   0., 679., 101., 165.,  39.,   9.,   0.],
+        [415.,   1.,   0.,   0., 100., 106., 117., 258.,   2.,   1.],
+        [ 41.,   0.,   0.,   0., 800.,  58.,  72.,  22.,   7.,   0.],
+        [  0.,   0.,   0.,   0.,   0., 732.,   0., 253.,   1.,  14.],
+        [163.,   0.,   0.,   0., 466., 159., 155.,  43.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0., 131.,   0., 861.,   0.,   8.],
+        [  1.,   0.,   0.,   0.,  79.,  71.,   4., 210., 633.,   2.],
+        [  0.,   0.,   0.,   0.,   1.,  25.,   0., 344.,   0., 630.]])
+2023-12-03 14:57:27,998 INFO server.py 229:: [Server] Precision=[0.35277137 0.95454544        nan        nan 0.35429585 0.45864663
+ 0.18386714 0.3885379  0.9336283  0.96183205],
+ Recall=[0.611 0.021 0.    0.    0.8   0.732 0.155 0.861 0.633 0.63 ],
+ F1-score=[0.4472914  0.04109589        nan        nan 0.49109882 0.5639445
+ 0.16820402 0.5354478  0.7544696  0.7613293 ],
+ my_accuracy=44.429999589920044[%]
+2023-12-03 14:57:27,999 INFO _main.py 228:: ########EPOCH 3 ########
+2023-12-03 14:57:27,999 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:58:11,462 INFO server.py 553:: flip_sign_id={0, 10, 11}
+2023-12-03 14:58:11,462 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 14:58:11,738 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1
+  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 14:58:11,844 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 24 25 26 27
+ 28 29 30 31 32 33 34 35 36], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 18 19 20 21 22 23 27 28 29 30
+ 31 32 33 34 35 36 37 38 39]
+2023-12-03 14:58:11,844 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 14:58:11,844 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 14:58:11,845 DEBUG server.py 617:: d_normal_sus={7: 1.9033858, 24: 2.399885, 25: 2.457483, 26: 2.4539487}, d_separate=2.1516353487968445
+2023-12-03 14:58:11,845 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 14:58:11,845 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 14:58:12,958 INFO server.py 118:: This round TARGETED ATTACK: [29]
+2023-12-03 14:58:12,958 DEBUG server.py 487:: mal_ids=set(), pre_mal_id=defaultdict(<class 'int'>, {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 1, 11: 1, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 1, 25: 1, 26: 1, 27: 0, 28: 0, 29: 1, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 14:58:12,958 INFO server.py 489:: FLIP-SIGN ATTACK=set()
+2023-12-03 14:58:12,958 INFO server.py 490:: UNTARGETED ATTACK=set()
+2023-12-03 14:58:12,958 INFO server.py 491:: TARGETED ATTACK=set()
+2023-12-03 14:58:12,958 INFO server.py 647:: OVERTIME MALICIOUS client ids =set()
+2023-12-03 14:58:13,083 INFO server.py 693:: This round UNRELIABLE={2, 14, 18, 20, 24, 25, 26}, normal_id={1, 3, 4, 5, 6, 7, 8, 9, 12, 13, 15, 16, 17, 19, 21, 22, 23, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 14:58:13,084 DEBUG server.py 695:: anlge_sHoGs={1: 0.4389397, 2: 0.11528594, 3: 0.3447192, 4: 0.3734705, 5: 0.5840644, 6: 0.27062523, 7: 0.4612172, 8: 0.37762251, 9: 0.44433, 12: 0.43490532, 13: 0.52563184, 14: 0.17426828, 15: 0.42997602, 16: 0.40015465, 17: 0.35561877, 18: 0.014945771, 19: 0.5321491, 20: 0.124201514, 21: 0.4338016, 22: 0.3250971, 23: 0.35009673, 24: 0.081447706, 25: 0.09696782, 26: 0.091396354, 27: 0.45579487, 28: 0.6222397, 29: 0.33506948, 30: 0.3354804, 31: 0.41805676, 32: 0.5214356, 33: 0.5631837, 34: 0.4602579, 35: 0.3766618, 36: 0.4533852, 37: 0.31468272, 38: 0.47275212, 39: 0.42560714}, angle_sep_nsH=0.2224467545747757
+2023-12-03 14:58:13,084 INFO server.py 707:: UNRELIABLE clients =set()
+2023-12-03 14:58:13,085 INFO server.py 728:: clients' sizes=[12, 12, 4, 16, 9, 18, 12, 27, 16, 10, 7, 10, 8, 14, 6, 9, 10, 16, 4, 15, 10, 10, 9, 14, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=422
+2023-12-03 14:58:13,127 INFO server.py 298:: [Server] The aggregation takes 3.027344 seconds.
+
+2023-12-03 14:58:13,131 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:58:15,443 INFO server.py 210:: [Server] Test set: Average loss: 1.0340, Accuracy: 6589/10000 (65.89%)
+
+2023-12-03 14:58:15,445 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[793.,   5.,  38.,  56.,  32.,  48.,   3.,   2.,  23.,   0.],
+        [ 90., 767.,   8.,  99.,  23.,  11.,   0.,   1.,   1.,   0.],
+        [ 25.,   7., 309.,   3., 481.,  59.,  90.,   2.,  23.,   1.],
+        [309.,  21.,   2., 504., 101.,  50.,   9.,   0.,   3.,   1.],
+        [ 31.,   1.,  64.,  16., 807.,  42.,  28.,   0.,  10.,   1.],
+        [  0.,   1.,   0.,   1.,   0., 741.,   0., 193.,   4.,  60.],
+        [269.,   2.,  88.,  35., 420., 101.,  46.,   5.,  34.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  71.,   0., 849.,   0.,  80.],
+        [  1.,   2.,  29.,   2.,  16.,  52.,   1.,  33., 861.,   3.],
+        [  0.,   0.,   0.,   0.,   0.,  16.,   0.,  71.,   1., 912.]])
+2023-12-03 14:58:15,446 INFO server.py 229:: [Server] Precision=[0.5223979  0.9516129  0.57434946 0.7039106  0.4292553  0.6221663
+ 0.259887   0.73442906 0.896875   0.8620038 ],
+ Recall=[0.793 0.767 0.309 0.504 0.807 0.741 0.046 0.849 0.861 0.912],
+ F1-score=[0.629865   0.8493909  0.40182057 0.5874126  0.56041664 0.67640346
+ 0.07816482 0.7875695  0.8785715  0.8862974 ],
+ my_accuracy=65.89000225067139[%]
+2023-12-03 14:58:15,446 INFO _main.py 228:: ########EPOCH 4 ########
+2023-12-03 14:58:15,446 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:58:59,037 INFO server.py 553:: flip_sign_id={0, 10, 11}
+2023-12-03 14:58:59,037 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 14:58:59,302 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1
+  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 14:58:59,407 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 24 25 26 27
+ 28 29 30 31 32 33 34 35 36], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 18 19 20 21 22 23 27 28 29 30
+ 31 32 33 34 35 36 37 38 39]
+2023-12-03 14:58:59,407 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 14:58:59,408 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 14:58:59,408 DEBUG server.py 617:: d_normal_sus={7: 1.9033858, 24: 2.399885, 25: 2.457483, 26: 2.4539487}, d_separate=2.1516353487968445
+2023-12-03 14:58:59,409 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 14:58:59,409 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 14:59:00,546 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 14:59:00,546 DEBUG server.py 487:: mal_ids={0, 10, 11, 24, 25, 26}, pre_mal_id=defaultdict(<class 'int'>, {0: 2, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 1, 7: 0, 8: 1, 9: 0, 10: 2, 11: 2, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 1, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 1, 24: 2, 25: 2, 26: 2, 27: 0, 28: 0, 29: 2, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 14:59:00,547 INFO server.py 489:: FLIP-SIGN ATTACK={0, 10, 11}
+2023-12-03 14:59:00,547 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 14:59:00,547 INFO server.py 491:: TARGETED ATTACK=set()
+2023-12-03 14:59:00,547 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 10, 11, 24, 25, 26}
+2023-12-03 14:59:00,667 INFO server.py 693:: This round UNRELIABLE={2, 18, 20}, normal_id={1, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 19, 21, 22, 23, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 14:59:00,667 DEBUG server.py 695:: anlge_sHoGs={1: 0.43228304, 2: 0.068706445, 3: 0.30413505, 4: 0.41763118, 5: 0.6042329, 6: 0.2832129, 7: 0.47431752, 8: 0.38231537, 9: 0.47016105, 12: 0.45782652, 13: 0.5428911, 14: 0.1855706, 15: 0.39433035, 16: 0.40687168, 17: 0.36170495, 18: 0.02623492, 19: 0.53462577, 20: 0.086193845, 21: 0.4383765, 22: 0.29411805, 23: 0.35964218, 27: 0.4591056, 28: 0.61195505, 29: 0.3752707, 30: 0.33882508, 31: 0.4102001, 32: 0.48479006, 33: 0.5939248, 34: 0.4573769, 35: 0.34401542, 36: 0.46693766, 37: 0.3224613, 38: 0.49778363, 39: 0.42562655}, angle_sep_nsH=0.13588222116231918
+2023-12-03 14:59:00,667 INFO server.py 707:: UNRELIABLE clients =set()
+2023-12-03 14:59:00,668 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 4, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=335
+2023-12-03 14:59:00,699 INFO server.py 298:: [Server] The aggregation takes 3.019029 seconds.
+
+2023-12-03 14:59:00,703 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:59:03,037 INFO server.py 210:: [Server] Test set: Average loss: 0.7470, Accuracy: 7258/10000 (72.58%)
+
+2023-12-03 14:59:03,039 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[729.,  12.,  52., 136.,  14.,  11.,  26.,   0.,  20.,   0.],
+        [  3., 852.,  18., 113.,  11.,   0.,   2.,   0.,   1.,   0.],
+        [  6.,  12., 685.,  17., 229.,   5.,  34.,   0.,  11.,   1.],
+        [ 23.,  25.,  21., 867.,  36.,   1.,  24.,   0.,   3.,   0.],
+        [  0.,   5., 273.,  86., 601.,   8.,  19.,   0.,   7.,   1.],
+        [  0.,   1.,   0.,   3.,   0., 745.,   0., 198.,   5.,  48.],
+        [185.,   5., 297., 122., 254.,  28.,  78.,   1.,  30.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  31.,   0., 886.,   0.,  83.],
+        [  2.,   2.,  33.,  14.,  11.,  29.,   1.,  14., 892.,   2.],
+        [  0.,   1.,   0.,   1.,   0.,   7.,   0.,  68.,   0., 923.]])
+2023-12-03 14:59:03,040 INFO server.py 229:: [Server] Precision=[0.76898736 0.9311475  0.49673676 0.6379691  0.5198962  0.8612717
+ 0.42391303 0.75921166 0.92053664 0.87240076],
+ Recall=[0.729 0.852 0.685 0.867 0.601 0.745 0.078 0.886 0.892 0.923],
+ F1-score=[0.74846    0.88981724 0.57587224 0.7350572  0.5575139  0.7989276
+ 0.13175677 0.81772035 0.90604365 0.8969874 ],
+ my_accuracy=72.57999777793884[%]
+2023-12-03 14:59:03,040 INFO _main.py 228:: ########EPOCH 5 ########
+2023-12-03 14:59:03,040 INFO _main.py 229:: ###Model distribution###
+2023-12-03 14:59:46,607 INFO server.py 553:: flip_sign_id={0, 10, 11}
+2023-12-03 14:59:46,607 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 14:59:46,884 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1
+  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 14:59:46,995 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 24 25 26 27
+ 28 29 30 31 32 33 34 35 36], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 18 19 20 21 22 23 27 28 29 30
+ 31 32 33 34 35 36 37 38 39]
+2023-12-03 14:59:46,995 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 14:59:46,995 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 14:59:46,996 DEBUG server.py 617:: d_normal_sus={7: 1.9033858, 24: 2.399885, 25: 2.457483, 26: 2.4539487}, d_separate=2.1516353487968445
+2023-12-03 14:59:46,996 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 14:59:46,996 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 14:59:47,985 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 14:59:47,985 DEBUG server.py 487:: mal_ids={0, 10, 11, 24, 25, 26}, pre_mal_id=defaultdict(<class 'int'>, {0: 3, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 2, 7: 0, 8: 2, 9: 0, 10: 3, 11: 3, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 2, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 2, 24: 3, 25: 3, 26: 3, 27: 0, 28: 0, 29: 3, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 14:59:47,985 INFO server.py 489:: FLIP-SIGN ATTACK={0, 10, 11}
+2023-12-03 14:59:47,985 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 14:59:47,985 INFO server.py 491:: TARGETED ATTACK=set()
+2023-12-03 14:59:47,985 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 10, 11, 24, 25, 26}
+2023-12-03 14:59:48,105 INFO server.py 693:: This round UNRELIABLE={2, 18, 20}, normal_id={1, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 19, 21, 22, 23, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 14:59:48,106 DEBUG server.py 695:: anlge_sHoGs={1: 0.43228304, 2: 0.068706445, 3: 0.30413505, 4: 0.41763118, 5: 0.6042329, 6: 0.2832129, 7: 0.47431752, 8: 0.38231537, 9: 0.47016105, 12: 0.45782652, 13: 0.5428911, 14: 0.1855706, 15: 0.39433035, 16: 0.40687168, 17: 0.36170495, 18: 0.02623492, 19: 0.53462577, 20: 0.086193845, 21: 0.4383765, 22: 0.29411805, 23: 0.35964218, 27: 0.4591056, 28: 0.61195505, 29: 0.3752707, 30: 0.33882508, 31: 0.4102001, 32: 0.48479006, 33: 0.5939248, 34: 0.4573769, 35: 0.34401542, 36: 0.46693766, 37: 0.3224613, 38: 0.49778363, 39: 0.42562655}, angle_sep_nsH=0.13588222116231918
+2023-12-03 14:59:48,106 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20}
+2023-12-03 14:59:48,107 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 4, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=335
+2023-12-03 14:59:48,135 INFO server.py 298:: [Server] The aggregation takes 2.872718 seconds.
+
+2023-12-03 14:59:48,136 INFO server.py 186:: [Server] Start testing
+2023-12-03 14:59:50,459 INFO server.py 210:: [Server] Test set: Average loss: 0.6641, Accuracy: 7514/10000 (75.14%)
+
+2023-12-03 14:59:50,460 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[750.,   8.,  40., 117.,  16.,   7.,  43.,   0.,  19.,   0.],
+        [  0., 888.,  19.,  74.,  13.,   1.,   4.,   0.,   1.,   0.],
+        [ 11.,   7., 691.,  13., 230.,   2.,  36.,   0.,  10.,   0.],
+        [ 26.,  22.,  29., 846.,  42.,   1.,  31.,   0.,   3.,   0.],
+        [  0.,   5., 173.,  56., 734.,   9.,  15.,   0.,   8.,   0.],
+        [  0.,   1.,   0.,   2.,   0., 803.,   0., 161.,   3.,  30.],
+        [204.,   7., 295.,  96., 259.,  17.,  97.,   0.,  25.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  39.,   0., 893.,   0.,  68.],
+        [  3.,   2.,  25.,   9.,  12.,  29.,   5.,  14., 899.,   2.],
+        [  0.,   0.,   0.,   1.,   0.,  17.,   0.,  69.,   0., 913.]])
+2023-12-03 14:59:50,462 INFO server.py 229:: [Server] Precision=[0.75452715 0.94468087 0.543239   0.69686985 0.56202143 0.8681081
+ 0.4199134  0.78540015 0.928719   0.9012833 ],
+ Recall=[0.75  0.888 0.691 0.846 0.734 0.803 0.097 0.893 0.899 0.913],
+ F1-score=[0.7522568  0.91546386 0.60827464 0.7642277  0.6366002  0.83428574
+ 0.15759546 0.835751   0.9136179  0.90710384],
+ my_accuracy=75.13999938964844[%]
+2023-12-03 14:59:50,462 INFO _main.py 228:: ########EPOCH 6 ########
+2023-12-03 14:59:50,462 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:00:34,057 INFO server.py 553:: flip_sign_id={0, 10, 11}
+2023-12-03 15:00:34,057 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:00:34,325 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1
+  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:00:34,437 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 24 25 26 27
+ 28 29 30 31 32 33 34 35 36], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 18 19 20 21 22 23 27 28 29 30
+ 31 32 33 34 35 36 37 38 39]
+2023-12-03 15:00:34,437 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:00:34,437 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:00:34,438 DEBUG server.py 617:: d_normal_sus={7: 1.9033858, 24: 2.399885, 25: 2.457483, 26: 2.4539487}, d_separate=2.1516353487968445
+2023-12-03 15:00:34,438 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:00:34,438 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:00:35,435 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:00:35,435 DEBUG server.py 487:: mal_ids={0, 10, 11, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 4, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3, 7: 0, 8: 3, 9: 0, 10: 4, 11: 4, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 3, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 3, 24: 4, 25: 4, 26: 4, 27: 0, 28: 0, 29: 4, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:00:35,435 INFO server.py 489:: FLIP-SIGN ATTACK={0, 10, 11}
+2023-12-03 15:00:35,435 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:00:35,435 INFO server.py 491:: TARGETED ATTACK={29}
+2023-12-03 15:00:35,435 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 10, 11, 24, 25, 26, 29}
+2023-12-03 15:00:35,549 INFO server.py 693:: This round UNRELIABLE={18}, normal_id={1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:00:35,549 DEBUG server.py 695:: anlge_sHoGs={1: 0.453668, 2: 0.10599312, 3: 0.3280737, 4: 0.40780643, 5: 0.61005914, 6: 0.2500605, 7: 0.47375, 8: 0.35655504, 9: 0.48695442, 12: 0.43954936, 13: 0.5318674, 14: 0.19202377, 15: 0.40765145, 16: 0.40147352, 17: 0.3381649, 18: 0.011639646, 19: 0.5435651, 20: 0.10933145, 21: 0.43102798, 22: 0.29738814, 23: 0.32430512, 27: 0.44587657, 28: 0.6303318, 30: 0.3300907, 31: 0.41463986, 32: 0.50129676, 33: 0.5935798, 34: 0.43610632, 35: 0.35095984, 36: 0.46652436, 37: 0.33144298, 38: 0.48509362, 39: 0.43768558}, angle_sep_nsH=0.058816383592784405
+2023-12-03 15:00:35,549 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20}
+2023-12-03 15:00:35,550 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 4, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=335
+2023-12-03 15:00:35,579 INFO server.py 298:: [Server] The aggregation takes 2.874921 seconds.
+
+2023-12-03 15:00:35,580 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:00:37,912 INFO server.py 210:: [Server] Test set: Average loss: 0.6167, Accuracy: 7664/10000 (76.64%)
+
+2023-12-03 15:00:37,914 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[760.,   8.,  38., 111.,  12.,   7.,  46.,   0.,  18.,   0.],
+        [  0., 908.,  15.,  61.,  11.,   1.,   3.,   0.,   1.,   0.],
+        [ 12.,   4., 704.,  14., 212.,   2.,  41.,   0.,  11.,   0.],
+        [ 23.,  17.,  37., 870.,  22.,   0.,  27.,   0.,   4.,   0.],
+        [  0.,   5., 163.,  65., 726.,   3.,  29.,   0.,   9.,   0.],
+        [  0.,   1.,   0.,   2.,   0., 807.,   0., 156.,   3.,  31.],
+        [206.,   5., 292.,  96., 216.,   7., 150.,   0.,  28.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  27.,   0., 897.,   0.,  76.],
+        [  3.,   2.,  19.,   8.,  10.,  25.,   8.,  10., 912.,   3.],
+        [  0.,   0.,   0.,   1.,   0.,  12.,   0.,  57.,   0., 930.]])
+2023-12-03 15:00:37,915 INFO server.py 229:: [Server] Precision=[0.75697213 0.95578945 0.55520505 0.70846903 0.6004963  0.9057239
+ 0.49342105 0.80089283 0.9249493  0.8942308 ],
+ Recall=[0.76  0.908 0.704 0.87  0.726 0.807 0.15  0.897 0.912 0.93 ],
+ F1-score=[0.75848305 0.93128204 0.6208112  0.78096944 0.657311   0.85351664
+ 0.23006135 0.8462264  0.91842896 0.91176474],
+ my_accuracy=76.63999795913696[%]
+2023-12-03 15:00:37,916 INFO _main.py 228:: ########EPOCH 7 ########
+2023-12-03 15:00:37,916 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:01:21,722 INFO server.py 553:: flip_sign_id={0, 10, 11}
+2023-12-03 15:01:21,722 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:01:21,994 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1
+  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:01:22,105 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 24 25 26 27
+ 28 29 30 31 32 33 34 35 36], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 18 19 20 21 22 23 27 28 29 30
+ 31 32 33 34 35 36 37 38 39]
+2023-12-03 15:01:22,105 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:01:22,106 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:01:22,106 DEBUG server.py 617:: d_normal_sus={7: 1.9033858, 24: 2.399885, 25: 2.457483, 26: 2.4539487}, d_separate=2.1516353487968445
+2023-12-03 15:01:22,107 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:01:22,107 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:01:23,148 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:01:23,148 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 5, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 4, 7: 0, 8: 4, 9: 0, 10: 5, 11: 5, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 4, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 4, 24: 5, 25: 5, 26: 5, 27: 0, 28: 0, 29: 5, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:01:23,148 INFO server.py 489:: FLIP-SIGN ATTACK={0, 10, 11}
+2023-12-03 15:01:23,148 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:01:23,148 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:01:23,148 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 23, 24, 25, 26, 29}
+2023-12-03 15:01:23,242 INFO server.py 693:: This round UNRELIABLE={18}, normal_id={1, 2, 3, 4, 5, 7, 9, 12, 13, 14, 15, 16, 19, 20, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:01:23,242 DEBUG server.py 695:: anlge_sHoGs={1: 0.51860213, 2: 0.1323471, 3: 0.32326728, 4: 0.42563426, 5: 0.55825615, 7: 0.50206244, 9: 0.5247672, 12: 0.36922967, 13: 0.471992, 14: 0.19250043, 15: 0.4162532, 16: 0.5164864, 18: -0.04701419, 19: 0.52211374, 20: 0.11764706, 21: 0.4714271, 22: 0.38591802, 27: 0.46785423, 28: 0.6670912, 30: 0.2695419, 31: 0.51903254, 32: 0.4431822, 33: 0.6325467, 34: 0.46465763, 35: 0.3475731, 36: 0.53186697, 37: 0.3902174, 38: 0.51716316, 39: 0.51033306}, angle_sep_nsH=0.03531643748283386
+2023-12-03 15:01:23,242 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20}
+2023-12-03 15:01:23,243 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 4, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=335
+2023-12-03 15:01:23,272 INFO server.py 298:: [Server] The aggregation takes 2.895524 seconds.
+
+2023-12-03 15:01:23,274 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:01:25,610 INFO server.py 210:: [Server] Test set: Average loss: 0.5763, Accuracy: 7851/10000 (78.51%)
+
+2023-12-03 15:01:25,612 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[750.,   8.,  39., 105.,  13.,   6.,  61.,   0.,  18.,   0.],
+        [  0., 927.,  11.,  45.,  11.,   1.,   4.,   0.,   1.,   0.],
+        [  7.,   3., 672.,  13., 222.,   3.,  70.,   0.,  10.,   0.],
+        [ 18.,  19.,  29., 850.,  30.,   0.,  52.,   0.,   2.,   0.],
+        [  0.,   6., 128.,  45., 765.,   2.,  47.,   0.,   7.,   0.],
+        [  0.,   1.,   0.,   1.,   0., 872.,   0.,  95.,   3.,  28.],
+        [190.,   5., 218.,  78., 214.,   4., 263.,   0.,  28.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  37.,   0., 900.,   0.,  63.],
+        [  3.,   2.,  15.,   5.,   8.,  28.,  12.,   4., 920.,   3.],
+        [  0.,   1.,   0.,   0.,   0.,  13.,   0.,  54.,   0., 932.]])
+2023-12-03 15:01:25,613 INFO server.py 229:: [Server] Precision=[0.7747934  0.9537037  0.60431653 0.74430823 0.60570073 0.9026915
+ 0.51669943 0.85470086 0.9302326  0.90838206],
+ Recall=[0.75  0.927 0.672 0.85  0.765 0.872 0.263 0.9   0.92  0.932],
+ F1-score=[0.7621951  0.9401623  0.6363636  0.7936508  0.6760937  0.8870803
+ 0.34857523 0.8767657  0.925088   0.9200394 ],
+ my_accuracy=78.5099983215332[%]
+2023-12-03 15:01:25,613 INFO _main.py 228:: ########EPOCH 8 ########
+2023-12-03 15:01:25,613 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:02:09,291 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:02:09,291 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:02:09,540 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:02:09,652 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:02:09,653 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:02:09,653 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:02:09,654 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:02:09,654 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:02:09,654 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:02:10,633 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:02:10,633 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 6, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 5, 7: 0, 8: 5, 9: 0, 10: 6, 11: 6, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 5, 18: 1, 19: 0, 20: 0, 21: 0, 22: 0, 23: 5, 24: 6, 25: 6, 26: 6, 27: 0, 28: 0, 29: 6, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:02:10,633 INFO server.py 489:: FLIP-SIGN ATTACK={0, 10, 11}
+2023-12-03 15:02:10,633 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:02:10,633 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:02:10,633 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 23, 24, 25, 26, 29}
+2023-12-03 15:02:10,727 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:02:10,728 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:02:10,728 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20}
+2023-12-03 15:02:10,729 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 4, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=335
+2023-12-03 15:02:10,757 INFO server.py 298:: [Server] The aggregation takes 2.793566 seconds.
+
+2023-12-03 15:02:10,759 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:02:13,075 INFO server.py 210:: [Server] Test set: Average loss: 0.5474, Accuracy: 7955/10000 (79.55%)
+
+2023-12-03 15:02:13,077 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[772.,   9.,  46.,  91.,  10.,   3.,  53.,   0.,  16.,   0.],
+        [  0., 951.,   8.,  30.,   6.,   0.,   4.,   0.,   1.,   0.],
+        [  9.,   3., 732.,  11., 194.,   2.,  38.,   0.,  11.,   0.],
+        [ 23.,  29.,  36., 853.,  28.,   0.,  29.,   0.,   2.,   0.],
+        [  0.,  10., 161.,  42., 747.,   0.,  34.,   0.,   6.,   0.],
+        [  0.,   1.,   0.,   0.,   0., 896.,   0.,  76.,   3.,  24.],
+        [209.,   8., 272.,  65., 186.,   1., 232.,   0.,  27.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  33.,   0., 908.,   0.,  59.],
+        [  2.,   2.,  16.,   6.,   7.,  25.,   9.,   4., 925.,   4.],
+        [  0.,   1.,   0.,   0.,   0.,  13.,   0.,  47.,   0., 939.]])
+2023-12-03 15:02:13,078 INFO server.py 229:: [Server] Precision=[0.76059115 0.93786985 0.57592446 0.77686703 0.63412565 0.92086333
+ 0.5814536  0.87729466 0.93340063 0.9152047 ],
+ Recall=[0.772 0.951 0.732 0.853 0.747 0.896 0.232 0.908 0.925 0.939],
+ F1-score=[0.7662532  0.9443893  0.6446499  0.81315535 0.6859504  0.9082616
+ 0.33166546 0.8923833  0.92918134 0.9269497 ],
+ my_accuracy=79.54999804496765[%]
+2023-12-03 15:02:13,078 INFO _main.py 228:: ########EPOCH 9 ########
+2023-12-03 15:02:13,078 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:02:56,769 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:02:56,770 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:02:57,020 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:02:57,132 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:02:57,133 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:02:57,133 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:02:57,134 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:02:57,134 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:02:57,134 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:02:58,081 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:02:58,081 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 7, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6, 7: 0, 8: 6, 9: 0, 10: 7, 11: 7, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 6, 18: 2, 19: 0, 20: 0, 21: 0, 22: 0, 23: 6, 24: 7, 25: 7, 26: 7, 27: 0, 28: 0, 29: 7, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:02:58,081 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:02:58,081 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:02:58,081 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:02:58,081 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:02:58,175 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:02:58,175 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:02:58,176 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20}
+2023-12-03 15:02:58,177 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:02:58,205 INFO server.py 298:: [Server] The aggregation takes 2.736052 seconds.
+
+2023-12-03 15:02:58,206 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:03:00,520 INFO server.py 210:: [Server] Test set: Average loss: 0.5207, Accuracy: 8075/10000 (80.75%)
+
+2023-12-03 15:03:00,522 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[752.,   6.,  31.,  96.,  11.,   4.,  82.,   0.,  18.,   0.],
+        [  0., 934.,   4.,  46.,   9.,   0.,   6.,   0.,   1.,   0.],
+        [  6.,   1., 647.,  13., 217.,   3., 102.,   0.,  11.,   0.],
+        [ 20.,  14.,  12., 875.,  29.,   0.,  48.,   0.,   2.,   0.],
+        [  0.,   4.,  91.,  48., 791.,   0.,  58.,   0.,   8.,   0.],
+        [  0.,   1.,   0.,   0.,   0., 887.,   0.,  84.,   2.,  26.],
+        [186.,   2., 147.,  62., 189.,   0., 384.,   0.,  30.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  26.,   0., 931.,   0.,  43.],
+        [  2.,   2.,  10.,   4.,   7.,  21.,  11.,   5., 935.,   3.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  51.,   0., 939.]])
+2023-12-03 15:03:00,523 INFO server.py 229:: [Server] Precision=[0.7784679  0.96887964 0.68683654 0.76486015 0.6312849  0.9327024
+ 0.55571634 0.86928105 0.9285005  0.92878336],
+ Recall=[0.752 0.934 0.647 0.875 0.791 0.887 0.384 0.931 0.935 0.939],
+ F1-score=[0.7650051  0.9511201  0.6663234  0.81623137 0.7021749  0.9092773
+ 0.45416912 0.8990826  0.9317389  0.93386376],
+ my_accuracy=80.75000047683716[%]
+2023-12-03 15:03:00,524 INFO _main.py 228:: ########EPOCH 10 ########
+2023-12-03 15:03:00,524 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:03:44,109 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:03:44,109 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:03:44,357 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:03:44,469 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:03:44,469 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:03:44,470 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:03:44,470 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:03:44,471 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:03:44,471 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:03:45,483 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:03:45,484 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 8, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 7, 7: 0, 8: 7, 9: 0, 10: 8, 11: 8, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 7, 18: 3, 19: 0, 20: 0, 21: 0, 22: 0, 23: 7, 24: 8, 25: 8, 26: 8, 27: 0, 28: 0, 29: 8, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:03:45,484 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:03:45,484 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:03:45,484 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:03:45,484 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:03:45,578 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:03:45,579 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:03:45,579 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20, 14}
+2023-12-03 15:03:45,580 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:03:45,613 INFO server.py 298:: [Server] The aggregation takes 2.801365 seconds.
+
+2023-12-03 15:03:45,616 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:03:47,946 INFO server.py 210:: [Server] Test set: Average loss: 0.4947, Accuracy: 8168/10000 (81.68%)
+
+2023-12-03 15:03:47,948 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[748.,   9.,  37.,  85.,   7.,   4.,  94.,   0.,  16.,   0.],
+        [  0., 952.,   4.,  33.,   5.,   0.,   5.,   0.,   1.,   0.],
+        [  7.,   1., 740.,  12., 167.,   2.,  64.,   0.,   7.,   0.],
+        [ 18.,  18.,  22., 867.,  31.,   0.,  42.,   0.,   2.,   0.],
+        [  0.,   4., 141.,  49., 756.,   0.,  46.,   0.,   4.,   0.],
+        [  0.,   1.,   0.,   0.,   0., 926.,   0.,  49.,   1.,  23.],
+        [172.,   5., 212.,  51., 159.,   0., 376.,   0.,  25.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  28.,   0., 928.,   0.,  44.],
+        [  1.,   2.,  13.,   5.,   7.,  20.,  11.,   5., 932.,   4.],
+        [  0.,   1.,   0.,   0.,   0.,  15.,   0.,  41.,   0., 943.]])
+2023-12-03 15:03:47,949 INFO server.py 229:: [Server] Precision=[0.7906977  0.95871097 0.6330197  0.7867514  0.66784453 0.9306533
+ 0.5893417  0.9071359  0.94331986 0.9299803 ],
+ Recall=[0.748 0.952 0.74  0.867 0.756 0.926 0.376 0.928 0.932 0.943],
+ F1-score=[0.7687564  0.95534366 0.6823421  0.8249287  0.70919317 0.9283208
+ 0.45909646 0.9174493  0.93762577 0.9364449 ],
+ my_accuracy=81.67999982833862[%]
+2023-12-03 15:03:47,949 INFO _main.py 228:: ########EPOCH 11 ########
+2023-12-03 15:03:47,949 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:04:31,533 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:04:31,534 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:04:31,781 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:04:31,893 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:04:31,893 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:04:31,894 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:04:31,894 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:04:31,895 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:04:31,895 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:04:32,891 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:04:32,892 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 9, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 8, 7: 0, 8: 8, 9: 0, 10: 9, 11: 9, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 8, 18: 4, 19: 0, 20: 0, 21: 0, 22: 0, 23: 8, 24: 9, 25: 9, 26: 9, 27: 0, 28: 0, 29: 9, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:04:32,892 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:04:32,892 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:04:32,892 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:04:32,892 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:04:32,986 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:04:32,986 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:04:32,986 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20, 14}
+2023-12-03 15:04:32,987 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:04:33,018 INFO server.py 298:: [Server] The aggregation takes 2.785752 seconds.
+
+2023-12-03 15:04:33,020 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:04:35,347 INFO server.py 210:: [Server] Test set: Average loss: 0.4748, Accuracy: 8253/10000 (82.53%)
+
+2023-12-03 15:04:35,348 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[772.,   7.,  35.,  79.,   8.,   6.,  77.,   0.,  16.,   0.],
+        [  0., 957.,   1.,  31.,   6.,   0.,   4.,   0.,   1.,   0.],
+        [ 10.,   1., 718.,  12., 192.,   2.,  57.,   0.,   8.,   0.],
+        [ 21.,  13.,  18., 878.,  36.,   0.,  32.,   0.,   2.,   0.],
+        [  0.,   4.,  96.,  44., 806.,   0.,  44.,   0.,   6.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 926.,   0.,  49.,   1.,  23.],
+        [195.,   4., 175.,  52., 179.,   0., 368.,   0.,  27.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  23.,   0., 939.,   0.,  38.],
+        [  0.,   2.,  10.,   3.,   7.,  13.,  11.,   5., 946.,   3.],
+        [  0.,   0.,   0.,   0.,   0.,  14.,   0.,  43.,   0., 943.]])
+2023-12-03 15:04:35,349 INFO server.py 229:: [Server] Precision=[0.7735471  0.96862346 0.68186134 0.79818183 0.65316045 0.9410569
+ 0.62057334 0.90637064 0.93942404 0.9364449 ],
+ Recall=[0.772 0.957 0.718 0.878 0.806 0.926 0.368 0.939 0.946 0.943],
+ F1-score=[0.7727728  0.9627767  0.6994642  0.83619046 0.7215756  0.9334678
+ 0.46202135 0.92239684 0.94270056 0.93971103],
+ my_accuracy=82.52999782562256[%]
+2023-12-03 15:04:35,350 INFO _main.py 228:: ########EPOCH 12 ########
+2023-12-03 15:04:35,350 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:05:19,030 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:05:19,031 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:05:19,280 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:05:19,392 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:05:19,393 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:05:19,393 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:05:19,394 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:05:19,394 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:05:19,394 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:05:20,340 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:05:20,341 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 10, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 9, 7: 0, 8: 9, 9: 0, 10: 10, 11: 10, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 9, 18: 5, 19: 0, 20: 0, 21: 0, 22: 0, 23: 9, 24: 10, 25: 10, 26: 10, 27: 0, 28: 0, 29: 10, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:05:20,341 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:05:20,341 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:05:20,341 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:05:20,341 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:05:20,435 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:05:20,435 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:05:20,436 INFO server.py 707:: UNRELIABLE clients ={2, 18, 20, 14}
+2023-12-03 15:05:20,437 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:05:20,465 INFO server.py 298:: [Server] The aggregation takes 2.729807 seconds.
+
+2023-12-03 15:05:20,467 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:05:22,795 INFO server.py 210:: [Server] Test set: Average loss: 0.4540, Accuracy: 8361/10000 (83.61%)
+
+2023-12-03 15:05:22,797 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[761.,   5.,  32.,  64.,   8.,   6., 110.,   0.,  14.,   0.],
+        [  1., 958.,   2.,  28.,   6.,   0.,   4.,   0.,   1.,   0.],
+        [ 10.,   1., 743.,   9., 157.,   1.,  71.,   0.,   8.,   0.],
+        [ 18.,  14.,  15., 876.,  32.,   0.,  43.,   0.,   2.,   0.],
+        [  0.,   5., 105.,  33., 793.,   0.,  59.,   0.,   5.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 941.,   0.,  37.,   1.,  20.],
+        [167.,   5., 165.,  39., 141.,   0., 457.,   0.,  26.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  24.,   0., 942.,   0.,  34.],
+        [  1.,   2.,   9.,   3.,   7.,  12.,  14.,   4., 945.,   3.],
+        [  0.,   0.,   0.,   0.,   0.,  16.,   0.,  39.,   0., 945.]])
+2023-12-03 15:05:22,798 INFO server.py 229:: [Server] Precision=[0.79436326 0.96767676 0.6937442  0.8319088  0.6931818  0.941
+ 0.60290235 0.9217221  0.94311374 0.94311374],
+ Recall=[0.761 0.958 0.743 0.876 0.793 0.941 0.457 0.942 0.945 0.945],
+ F1-score=[0.77732384 0.96281403 0.71752775 0.85338527 0.7397388  0.94100004
+ 0.519909   0.9317508  0.944056   0.944056  ],
+ my_accuracy=83.60999822616577[%]
+2023-12-03 15:05:22,799 INFO _main.py 228:: ########EPOCH 13 ########
+2023-12-03 15:05:22,799 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:06:06,681 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:06:06,681 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:06:06,935 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:06:07,047 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:06:07,047 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:06:07,047 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:06:07,048 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:06:07,048 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:06:07,048 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:06:08,010 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:06:08,010 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 11, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 10, 7: 0, 8: 10, 9: 0, 10: 11, 11: 11, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 10, 18: 6, 19: 0, 20: 0, 21: 0, 22: 0, 23: 10, 24: 11, 25: 11, 26: 11, 27: 0, 28: 0, 29: 11, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:06:08,010 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:06:08,010 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:06:08,010 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:06:08,010 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:06:08,105 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:06:08,105 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:06:08,105 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:06:08,106 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:06:08,134 INFO server.py 298:: [Server] The aggregation takes 2.750983 seconds.
+
+2023-12-03 15:06:08,137 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:06:10,461 INFO server.py 210:: [Server] Test set: Average loss: 0.4446, Accuracy: 8364/10000 (83.64%)
+
+2023-12-03 15:06:10,463 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[775.,   4.,  30.,  57.,   9.,   6., 106.,   0.,  13.,   0.],
+        [  1., 962.,   2.,  27.,   4.,   0.,   3.,   0.,   1.,   0.],
+        [ 10.,   1., 727.,  10., 183.,   2.,  59.,   0.,   8.,   0.],
+        [ 22.,  13.,  15., 876.,  37.,   0.,  35.,   0.,   2.,   0.],
+        [  0.,   5., 105.,  35., 815.,   0.,  36.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 940.,   0.,  40.,   0.,  19.],
+        [181.,   5., 147.,  30., 189.,   0., 422.,   0.,  26.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  20.,   0., 952.,   0.,  28.],
+        [  1.,   2.,   7.,   2.,   8.,  10.,  11.,   5., 952.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,  14.,   0.,  43.,   0., 943.]])
+2023-12-03 15:06:10,464 INFO server.py 229:: [Server] Precision=[0.7828283  0.9697581  0.7037754  0.84393066 0.6546185  0.94758064
+ 0.6279762  0.9153846  0.9463221  0.95060486],
+ Recall=[0.775 0.962 0.727 0.876 0.815 0.94  0.422 0.952 0.952 0.943],
+ F1-score=[0.7788945  0.9658634  0.71519923 0.85966635 0.7260579  0.9437751
+ 0.5047847  0.9333333  0.9491525  0.9467872 ],
+ my_accuracy=83.63999724388123[%]
+2023-12-03 15:06:10,464 INFO _main.py 228:: ########EPOCH 14 ########
+2023-12-03 15:06:10,465 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:06:54,286 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:06:54,287 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:06:54,542 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:06:54,655 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:06:54,655 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:06:54,655 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:06:54,656 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:06:54,656 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:06:54,656 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:06:55,605 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:06:55,606 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 12, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 11, 7: 0, 8: 11, 9: 0, 10: 12, 11: 12, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 11, 18: 7, 19: 0, 20: 0, 21: 0, 22: 0, 23: 11, 24: 12, 25: 12, 26: 12, 27: 0, 28: 0, 29: 12, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:06:55,606 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:06:55,606 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:06:55,606 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:06:55,606 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:06:55,700 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:06:55,701 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:06:55,701 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:06:55,702 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:06:55,730 INFO server.py 298:: [Server] The aggregation takes 2.765302 seconds.
+
+2023-12-03 15:06:55,732 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:06:58,056 INFO server.py 210:: [Server] Test set: Average loss: 0.4316, Accuracy: 8440/10000 (84.4%)
+
+2023-12-03 15:06:58,058 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[744.,   4.,  28.,  66.,   8.,   6., 131.,   0.,  13.,   0.],
+        [  0., 963.,   1.,  28.,   4.,   0.,   3.,   0.,   1.,   0.],
+        [  8.,   1., 746.,  11., 160.,   1.,  65.,   0.,   8.,   0.],
+        [ 12.,  11.,  16., 895.,  36.,   0.,  28.,   0.,   2.,   0.],
+        [  0.,   3., 117.,  39., 785.,   0.,  52.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 952.,   0.,  27.,   0.,  20.],
+        [149.,   4., 140.,  43., 138.,   0., 502.,   0.,  24.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  21.,   0., 940.,   0.,  39.],
+        [  1.,   2.,   7.,   2.,   7.,  10.,   9.,   4., 956.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  33.,   0., 957.]])
+2023-12-03 15:06:58,059 INFO server.py 229:: [Server] Precision=[0.81400436 0.97469634 0.70710903 0.8248848  0.6898067  0.952
+ 0.63544303 0.936255   0.9484127  0.94007856],
+ Recall=[0.744 0.963 0.746 0.895 0.785 0.952 0.502 0.94  0.956 0.957],
+ F1-score=[0.77742946 0.9688128  0.72603405 0.8585131  0.7343312  0.952
+ 0.5608938  0.9381237  0.95219123 0.94846386],
+ my_accuracy=84.3999981880188[%]
+2023-12-03 15:06:58,059 INFO _main.py 228:: ########EPOCH 15 ########
+2023-12-03 15:06:58,060 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:07:41,527 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:07:41,527 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:07:41,783 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:07:41,895 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:07:41,895 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:07:41,895 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:07:41,896 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:07:41,896 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:07:41,896 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:07:42,829 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:07:42,829 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 13, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 12, 7: 0, 8: 12, 9: 0, 10: 13, 11: 13, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 12, 18: 8, 19: 0, 20: 0, 21: 0, 22: 0, 23: 12, 24: 13, 25: 13, 26: 13, 27: 0, 28: 0, 29: 13, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:07:42,829 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:07:42,830 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:07:42,830 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:07:42,830 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:07:42,927 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:07:42,927 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:07:42,927 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:07:42,928 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:07:42,961 INFO server.py 298:: [Server] The aggregation takes 2.737366 seconds.
+
+2023-12-03 15:07:42,963 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:07:45,295 INFO server.py 210:: [Server] Test set: Average loss: 0.4215, Accuracy: 8471/10000 (84.71%)
+
+2023-12-03 15:07:45,297 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[747.,   4.,  30.,  55.,   8.,   6., 137.,   0.,  13.,   0.],
+        [  1., 970.,   1.,  21.,   4.,   0.,   2.,   0.,   1.,   0.],
+        [  8.,   1., 759.,   9., 147.,   0.,  68.,   0.,   8.,   0.],
+        [ 13.,  15.,  14., 883.,  37.,   0.,  36.,   0.,   2.,   0.],
+        [  0.,   5., 121.,  37., 772.,   0.,  62.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 954.,   0.,  28.,   0.,  17.],
+        [149.,   6., 133.,  34., 109.,   0., 548.,   0.,  21.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  24.,   0., 952.,   0.,  24.],
+        [  1.,   2.,   6.,   1.,   7.,  10.,  16.,   5., 950.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,  18.,   0.,  46.,   0., 936.]])
+2023-12-03 15:07:45,298 INFO server.py 229:: [Server] Precision=[0.81284004 0.9670987  0.7133459  0.84822285 0.7121771  0.94268775
+ 0.63060987 0.92337537 0.9519038  0.95607764],
+ Recall=[0.747 0.97  0.759 0.883 0.772 0.954 0.548 0.952 0.95  0.936],
+ F1-score=[0.77853054 0.9685472  0.73546517 0.86526215 0.74088293 0.94831014
+ 0.5864098  0.93746924 0.9509509  0.9459322 ],
+ my_accuracy=84.7100019454956[%]
+2023-12-03 15:07:45,298 INFO _main.py 228:: ########EPOCH 16 ########
+2023-12-03 15:07:45,298 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:08:29,073 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:08:29,073 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:08:29,327 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:08:29,439 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:08:29,439 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:08:29,440 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:08:29,440 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:08:29,440 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:08:29,441 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:08:30,370 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:08:30,371 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 14, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 13, 7: 0, 8: 13, 9: 0, 10: 14, 11: 14, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 13, 18: 9, 19: 0, 20: 0, 21: 0, 22: 0, 23: 13, 24: 14, 25: 14, 26: 14, 27: 0, 28: 0, 29: 14, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:08:30,371 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:08:30,371 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:08:30,371 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:08:30,371 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:08:30,465 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:08:30,465 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:08:30,466 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:08:30,467 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:08:30,495 INFO server.py 298:: [Server] The aggregation takes 2.741745 seconds.
+
+2023-12-03 15:08:30,497 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:08:32,827 INFO server.py 210:: [Server] Test set: Average loss: 0.4132, Accuracy: 8511/10000 (85.11%)
+
+2023-12-03 15:08:32,828 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[771.,   4.,  28.,  50.,   8.,   6., 120.,   0.,  13.,   0.],
+        [  1., 972.,   0.,  18.,   5.,   0.,   3.,   0.,   1.,   0.],
+        [  9.,   1., 740.,  10., 166.,   0.,  67.,   0.,   7.,   0.],
+        [ 20.,  15.,  12., 880.,  36.,   0.,  35.,   0.,   2.,   0.],
+        [  0.,   3., 106.,  38., 797.,   0.,  53.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 949.,   0.,  32.,   0.,  18.],
+        [151.,   5., 121.,  29., 129.,   0., 542.,   0.,  23.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  16.,   0., 964.,   0.,  20.],
+        [  1.,   2.,   7.,   1.,   7.,   9.,  12.,   5., 954.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,   9.,   0.,  49.,   0., 942.]])
+2023-12-03 15:08:32,829 INFO server.py 229:: [Server] Precision=[0.80902416 0.9700599  0.72978306 0.85686463 0.6942509  0.9595551
+ 0.6514423  0.91809523 0.95114654 0.9592668 ],
+ Recall=[0.771 0.972 0.74  0.88  0.797 0.949 0.542 0.964 0.954 0.942],
+ F1-score=[0.78955454 0.971029   0.734856   0.86827826 0.7420857  0.95424837
+ 0.591703   0.9404878  0.9525711  0.95055497],
+ my_accuracy=85.11000275611877[%]
+2023-12-03 15:08:32,830 INFO _main.py 228:: ########EPOCH 17 ########
+2023-12-03 15:08:32,830 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:09:16,523 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:09:16,524 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:09:16,779 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:09:16,891 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:09:16,892 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:09:16,892 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:09:16,893 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:09:16,893 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:09:16,893 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:09:17,868 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:09:17,868 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 15, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 14, 7: 0, 8: 14, 9: 0, 10: 15, 11: 15, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 14, 18: 10, 19: 0, 20: 0, 21: 0, 22: 0, 23: 14, 24: 15, 25: 15, 26: 15, 27: 0, 28: 0, 29: 15, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:09:17,868 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:09:17,868 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:09:17,868 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:09:17,868 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:09:17,963 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:09:17,963 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:09:17,963 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:09:17,964 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:09:17,993 INFO server.py 298:: [Server] The aggregation takes 2.796239 seconds.
+
+2023-12-03 15:09:17,995 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:09:20,329 INFO server.py 210:: [Server] Test set: Average loss: 0.4051, Accuracy: 8558/10000 (85.58%)
+
+2023-12-03 15:09:20,330 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[755.,   4.,  30.,  49.,   8.,   4., 135.,   0.,  15.,   0.],
+        [  2., 967.,   1.,  22.,   4.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 780.,  11., 134.,   1.,  59.,   0.,   7.,   0.],
+        [ 11.,  10.,  17., 902.,  25.,   0.,  33.,   0.,   2.,   0.],
+        [  1.,   2., 130.,  40., 768.,   0.,  56.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 953.,   0.,  28.,   0.,  18.],
+        [143.,   3., 129.,  32.,  99.,   0., 571.,   0.,  23.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  19.,   0., 954.,   0.,  27.],
+        [  1.,   2.,   6.,   1.,   6.,   9.,   9.,   4., 960.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  42.,   0., 948.]])
+2023-12-03 15:09:20,331 INFO server.py 229:: [Server] Precision=[0.8206522 0.9777553 0.7136322 0.852552  0.7356322 0.9568273 0.6593534
+ 0.9280156 0.9495549 0.9527638],
+ Recall=[0.755 0.967 0.78  0.902 0.768 0.953 0.571 0.954 0.96  0.948],
+ F1-score=[0.7864583  0.9723479  0.7453416  0.8765792  0.75146776 0.95490986
+ 0.6120043  0.9408284  0.95474887 0.950376  ],
+ my_accuracy=85.57999730110168[%]
+2023-12-03 15:09:20,332 INFO _main.py 228:: ########EPOCH 18 ########
+2023-12-03 15:09:20,332 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:10:04,022 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:10:04,022 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:10:04,268 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:10:04,380 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:10:04,381 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:10:04,381 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:10:04,382 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:10:04,382 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:10:04,382 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:10:05,327 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:10:05,327 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 16, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 15, 7: 0, 8: 15, 9: 0, 10: 16, 11: 16, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 15, 18: 11, 19: 0, 20: 0, 21: 0, 22: 0, 23: 15, 24: 16, 25: 16, 26: 16, 27: 0, 28: 0, 29: 16, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:10:05,327 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:10:05,328 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:10:05,328 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:10:05,328 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:10:05,422 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:10:05,422 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:10:05,422 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:10:05,423 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:10:05,456 INFO server.py 298:: [Server] The aggregation takes 2.731121 seconds.
+
+2023-12-03 15:10:05,458 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:10:07,778 INFO server.py 210:: [Server] Test set: Average loss: 0.4017, Accuracy: 8573/10000 (85.73%)
+
+2023-12-03 15:10:07,779 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[783.,   4.,  31.,  51.,   8.,   4., 106.,   0.,  13.,   0.],
+        [  1., 970.,   1.,  20.,   4.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 794.,  12., 124.,   0.,  55.,   0.,   7.,   0.],
+        [ 12.,  12.,  17., 900.,  26.,   0.,  31.,   0.,   2.,   0.],
+        [  0.,   2., 138.,  41., 761.,   0.,  54.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 951.,   0.,  31.,   0.,  17.],
+        [163.,   3., 133.,  35.,  95.,   0., 549.,   0.,  22.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  18.,   0., 955.,   0.,  27.],
+        [  1.,   2.,   6.,   1.,   6.,   8.,  13.,   4., 957.,   2.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  37.,   0., 953.]])
+2023-12-03 15:10:07,780 INFO server.py 229:: [Server] Precision=[0.8097208  0.9758551  0.7089286  0.84825635 0.74316406 0.95963675
+ 0.67694205 0.9298929  0.9512922  0.953954  ],
+ Recall=[0.783 0.97  0.794 0.9   0.761 0.951 0.549 0.955 0.957 0.953],
+ F1-score=[0.79613626 0.9729188  0.74905664 0.8733624  0.7519763  0.9552989
+ 0.6062948  0.94227916 0.95413756 0.9534767 ],
+ my_accuracy=85.72999835014343[%]
+2023-12-03 15:10:07,781 INFO _main.py 228:: ########EPOCH 19 ########
+2023-12-03 15:10:07,781 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:10:51,581 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:10:51,581 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:10:51,835 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:10:51,946 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:10:51,947 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:10:51,947 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:10:51,948 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:10:51,948 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:10:51,948 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:10:52,898 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:10:52,898 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 17, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 16, 7: 0, 8: 16, 9: 0, 10: 17, 11: 17, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 16, 18: 12, 19: 0, 20: 0, 21: 0, 22: 0, 23: 16, 24: 17, 25: 17, 26: 17, 27: 0, 28: 0, 29: 17, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:10:52,898 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:10:52,898 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:10:52,898 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:10:52,898 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:10:52,993 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:10:52,993 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:10:52,993 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:10:52,994 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:10:53,022 INFO server.py 298:: [Server] The aggregation takes 2.746155 seconds.
+
+2023-12-03 15:10:53,024 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:10:55,351 INFO server.py 210:: [Server] Test set: Average loss: 0.3965, Accuracy: 8570/10000 (85.7%)
+
+2023-12-03 15:10:55,353 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[771.,   3.,  29.,  39.,  10.,   4., 131.,   0.,  13.,   0.],
+        [  2., 971.,   0.,  18.,   5.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 758.,  11., 151.,   0.,  65.,   0.,   7.,   0.],
+        [ 16.,  13.,  12., 888.,  35.,   0.,  34.,   0.,   2.,   0.],
+        [  0.,   2., 111.,  33., 802.,   0.,  48.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 950.,   0.,  32.,   0.,  17.],
+        [149.,   3., 115.,  29., 124.,   0., 557.,   0.,  23.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  18.,   0., 959.,   0.,  23.],
+        [  1.,   2.,   5.,   1.,   6.,   8.,  10.,   4., 962.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  38.,   0., 952.]])
+2023-12-03 15:10:55,354 INFO server.py 229:: [Server] Precision=[0.81501055 0.9758794  0.73592234 0.87058824 0.7078552  0.959596
+ 0.6568396  0.928364   0.9505929  0.95871097],
+ Recall=[0.771 0.971 0.758 0.888 0.802 0.95  0.557 0.959 0.962 0.952],
+ F1-score=[0.79239464 0.9734336  0.74679804 0.8792079  0.75199246 0.95477384
+ 0.6028139  0.94343334 0.95626247 0.95534366],
+ my_accuracy=85.69999933242798[%]
+2023-12-03 15:10:55,354 INFO _main.py 228:: ########EPOCH 20 ########
+2023-12-03 15:10:55,355 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:11:38,977 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:11:38,977 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:11:39,224 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:11:39,336 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:11:39,336 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:11:39,337 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:11:39,338 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:11:39,338 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:11:39,338 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:11:40,282 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:11:40,282 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 18, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 17, 7: 0, 8: 17, 9: 0, 10: 18, 11: 18, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 17, 18: 13, 19: 0, 20: 0, 21: 0, 22: 0, 23: 17, 24: 18, 25: 18, 26: 18, 27: 0, 28: 0, 29: 18, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:11:40,282 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:11:40,282 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:11:40,282 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:11:40,282 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:11:40,377 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:11:40,377 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:11:40,377 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:11:40,378 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:11:40,407 INFO server.py 298:: [Server] The aggregation takes 2.728495 seconds.
+
+2023-12-03 15:11:40,409 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:11:42,728 INFO server.py 210:: [Server] Test set: Average loss: 0.3926, Accuracy: 8598/10000 (85.98%)
+
+2023-12-03 15:11:42,730 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[768.,   2.,  26.,  46.,  10.,   4., 133.,   0.,  11.,   0.],
+        [  2., 970.,   0.,  19.,   5.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 775.,  12., 131.,   0.,  67.,   0.,   7.,   0.],
+        [ 15.,  12.,  16., 893.,  32.,   0.,  30.,   0.,   2.,   0.],
+        [  0.,   2., 118.,  32., 787.,   0.,  57.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 955.,   0.,  27.,   0.,  17.],
+        [157.,   3., 112.,  30., 100.,   0., 579.,   0.,  19.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  16.,   0., 953.,   0.,  31.],
+        [  1.,   2.,   5.,   1.,   6.,   8.,  13.,   4., 959.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,   9.,   0.,  32.,   0., 959.]])
+2023-12-03 15:11:42,731 INFO server.py 229:: [Server] Precision=[0.8084211  0.9778226  0.736692   0.8636364  0.7348273  0.9627016
+ 0.6564626  0.93799216 0.9561316  0.9513889 ],
+ Recall=[0.768 0.97  0.775 0.893 0.787 0.955 0.579 0.953 0.959 0.959],
+ F1-score=[0.7876923  0.9738956  0.75536054 0.8780728  0.76001936 0.9588353
+ 0.61530286 0.94543654 0.95756364 0.9551793 ],
+ my_accuracy=85.97999811172485[%]
+2023-12-03 15:11:42,731 INFO _main.py 228:: ########EPOCH 21 ########
+2023-12-03 15:11:42,731 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:12:26,269 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:12:26,269 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:12:26,517 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:12:26,629 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:12:26,629 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:12:26,629 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:12:26,630 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:12:26,630 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:12:26,630 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:12:27,589 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:12:27,589 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 19, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 18, 7: 0, 8: 18, 9: 0, 10: 19, 11: 19, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 18, 18: 14, 19: 0, 20: 0, 21: 0, 22: 0, 23: 18, 24: 19, 25: 19, 26: 19, 27: 0, 28: 0, 29: 19, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:12:27,589 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:12:27,589 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:12:27,589 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:12:27,589 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:12:27,684 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:12:27,684 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:12:27,684 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:12:27,685 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:12:27,713 INFO server.py 298:: [Server] The aggregation takes 2.744595 seconds.
+
+2023-12-03 15:12:27,715 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:12:30,038 INFO server.py 210:: [Server] Test set: Average loss: 0.3875, Accuracy: 8608/10000 (86.08%)
+
+2023-12-03 15:12:30,040 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[776.,   3.,  24.,  36.,  10.,   4., 135.,   0.,  12.,   0.],
+        [  1., 973.,   0.,  17.,   5.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 784.,  11., 133.,   0.,  57.,   0.,   7.,   0.],
+        [ 15.,  13.,  13., 891.,  33.,   0.,  33.,   0.,   2.,   0.],
+        [  0.,   2., 121.,  31., 789.,   0.,  53.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 952.,   0.,  30.,   1.,  16.],
+        [150.,   4., 117.,  30., 109.,   0., 573.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  17.,   0., 960.,   0.,  23.],
+        [  1.,   2.,   6.,   1.,   6.,   8.,  10.,   4., 961.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  41.,   0., 949.]])
+2023-12-03 15:12:30,041 INFO server.py 229:: [Server] Precision=[0.8168421  0.9749499  0.7361502  0.8752456  0.72718894 0.9606458
+ 0.6631944  0.92753625 0.9562189  0.9595551 ],
+ Recall=[0.776 0.973 0.784 0.891 0.789 0.952 0.573 0.96  0.961 0.949],
+ F1-score=[0.7958974  0.97397393 0.75932205 0.8830525  0.7568345  0.95630336
+ 0.6148069  0.94348896 0.9586035  0.95424837],
+ my_accuracy=86.080002784729[%]
+2023-12-03 15:12:30,041 INFO _main.py 228:: ########EPOCH 22 ########
+2023-12-03 15:12:30,041 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:13:13,779 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:13:13,780 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:13:14,028 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:13:14,141 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:13:14,141 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:13:14,141 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:13:14,142 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:13:14,142 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:13:14,142 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:13:15,088 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:13:15,088 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 20, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 19, 7: 0, 8: 19, 9: 0, 10: 20, 11: 20, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 19, 18: 15, 19: 0, 20: 0, 21: 0, 22: 0, 23: 19, 24: 20, 25: 20, 26: 20, 27: 0, 28: 0, 29: 20, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:13:15,088 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:13:15,089 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:13:15,089 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:13:15,089 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:13:15,183 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:13:15,183 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:13:15,183 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:13:15,184 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:13:15,212 INFO server.py 298:: [Server] The aggregation takes 2.728247 seconds.
+
+2023-12-03 15:13:15,214 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:13:17,532 INFO server.py 210:: [Server] Test set: Average loss: 0.3874, Accuracy: 8623/10000 (86.23%)
+
+2023-12-03 15:13:17,534 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[769.,   3.,  26.,  49.,  10.,   4., 128.,   0.,  11.,   0.],
+        [  1., 970.,   0.,  20.,   5.,   0.,   3.,   0.,   1.,   0.],
+        [  7.,   1., 783.,  11., 131.,   2.,  60.,   0.,   5.,   0.],
+        [ 12.,   9.,  10., 900.,  35.,   0.,  32.,   0.,   2.,   0.],
+        [  0.,   2., 116.,  31., 792.,   0.,  55.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 959.,   0.,  24.,   0.,  16.],
+        [142.,   2., 114.,  36., 106.,   0., 583.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  22.,   0., 954.,   0.,  24.],
+        [  0.,   1.,   7.,   1.,   6.,  10.,  10.,   3., 961.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  11.,   0.,  37.,   0., 952.]])
+2023-12-03 15:13:17,535 INFO server.py 229:: [Server] Precision=[0.82599354 0.98178136 0.74147725 0.85796    0.72995394 0.9513889
+ 0.66934556 0.93713164 0.96004    0.95871097],
+ Recall=[0.769 0.97  0.783 0.9   0.792 0.959 0.583 0.954 0.961 0.952],
+ F1-score=[0.79647845 0.9758552  0.7616731  0.87847733 0.7597122  0.9551793
+ 0.6231961  0.9454906  0.96051973 0.95534366],
+ my_accuracy=86.22999787330627[%]
+2023-12-03 15:13:17,535 INFO _main.py 228:: ########EPOCH 23 ########
+2023-12-03 15:13:17,535 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:14:01,303 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:14:01,303 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:14:01,556 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:14:01,668 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:14:01,669 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:14:01,669 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:14:01,670 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:14:01,670 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:14:01,670 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:14:02,618 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:14:02,619 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 21, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 20, 7: 0, 8: 20, 9: 0, 10: 21, 11: 21, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 20, 18: 16, 19: 0, 20: 0, 21: 0, 22: 0, 23: 20, 24: 21, 25: 21, 26: 21, 27: 0, 28: 0, 29: 21, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:14:02,619 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:14:02,619 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:14:02,619 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:14:02,619 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:14:02,713 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:14:02,713 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:14:02,713 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:14:02,714 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:14:02,743 INFO server.py 298:: [Server] The aggregation takes 2.742460 seconds.
+
+2023-12-03 15:14:02,745 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:14:05,069 INFO server.py 210:: [Server] Test set: Average loss: 0.3815, Accuracy: 8649/10000 (86.49%)
+
+2023-12-03 15:14:05,070 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[803.,   2.,  24.,  34.,   9.,   4., 113.,   0.,  11.,   0.],
+        [  3., 971.,   0.,  17.,   4.,   0.,   3.,   0.,   2.,   0.],
+        [  7.,   1., 783.,  11., 127.,   1.,  64.,   0.,   6.,   0.],
+        [ 19.,  11.,  11., 892.,  32.,   0.,  33.,   0.,   2.,   0.],
+        [  0.,   2., 101.,  30., 798.,   0.,  64.,   0.,   5.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 958.,   0.,  26.,   1.,  14.],
+        [164.,   2., 107.,  27., 109.,   0., 574.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  15.,   0., 965.,   0.,  20.],
+        [  1.,   1.,   5.,   1.,   7.,  10.,  10.,   3., 961.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  46.,   0., 944.]])
+2023-12-03 15:14:05,071 INFO server.py 229:: [Server] Precision=[0.8054162  0.9808081  0.7594568  0.8805528  0.73480666 0.9599198
+ 0.6666667  0.92788464 0.9562189  0.96424925],
+ Recall=[0.803 0.971 0.783 0.892 0.798 0.958 0.574 0.965 0.961 0.944],
+ F1-score=[0.80420625 0.97587943 0.7710487  0.88623947 0.7651007  0.9589589
+ 0.61687267 0.9460784  0.9586035  0.9540172 ],
+ my_accuracy=86.489999294281[%]
+2023-12-03 15:14:05,072 INFO _main.py 228:: ########EPOCH 24 ########
+2023-12-03 15:14:05,072 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:14:48,664 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:14:48,664 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:14:48,919 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:14:49,031 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:14:49,031 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:14:49,031 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:14:49,032 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:14:49,032 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:14:49,032 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:14:49,974 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:14:49,975 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 22, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21, 7: 0, 8: 21, 9: 0, 10: 22, 11: 22, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 21, 18: 17, 19: 0, 20: 0, 21: 0, 22: 0, 23: 21, 24: 22, 25: 22, 26: 22, 27: 0, 28: 0, 29: 22, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:14:49,975 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:14:49,975 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:14:49,975 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:14:49,975 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:14:50,069 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:14:50,070 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:14:50,070 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:14:50,071 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:14:50,099 INFO server.py 298:: [Server] The aggregation takes 2.732129 seconds.
+
+2023-12-03 15:14:50,101 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:14:52,419 INFO server.py 210:: [Server] Test set: Average loss: 0.3801, Accuracy: 8651/10000 (86.51%)
+
+2023-12-03 15:14:52,420 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[789.,   3.,  22.,  35.,  10.,   4., 126.,   0.,  11.,   0.],
+        [  2., 971.,   0.,  18.,   4.,   0.,   3.,   0.,   2.,   0.],
+        [  9.,   1., 785.,  12., 124.,   0.,  63.,   0.,   6.,   0.],
+        [ 15.,  10.,  12., 901.,  30.,   0.,  30.,   0.,   2.,   0.],
+        [  0.,   2., 116.,  31., 793.,   0.,  55.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 960.,   0.,  25.,   1.,  13.],
+        [150.,   2., 105.,  29., 116.,   0., 579.,   0.,  19.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  19.,   0., 959.,   0.,  22.],
+        [  1.,   1.,   4.,   2.,   7.,  10.,   9.,   3., 962.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  11.,   0.,  37.,   0., 952.]])
+2023-12-03 15:14:52,421 INFO server.py 229:: [Server] Precision=[0.8167702  0.9808081  0.7519157  0.8756074  0.7315498  0.9561753
+ 0.66936415 0.93652344 0.9562624  0.9635627 ],
+ Recall=[0.789 0.971 0.785 0.901 0.793 0.96  0.579 0.959 0.962 0.952],
+ F1-score=[0.80264497 0.97587943 0.76810175 0.8881222  0.76103646 0.9580838
+ 0.62091154 0.94762844 0.9591226  0.95774645],
+ my_accuracy=86.51000261306763[%]
+2023-12-03 15:14:52,422 INFO _main.py 228:: ########EPOCH 25 ########
+2023-12-03 15:14:52,422 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:15:35,937 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:15:35,937 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:15:36,191 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:15:36,303 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:15:36,304 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:15:36,304 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:15:36,305 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:15:36,305 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:15:36,305 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:15:37,255 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:15:37,255 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 23, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 22, 7: 0, 8: 22, 9: 0, 10: 23, 11: 23, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 22, 18: 18, 19: 0, 20: 0, 21: 0, 22: 0, 23: 22, 24: 23, 25: 23, 26: 23, 27: 0, 28: 0, 29: 23, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:15:37,255 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:15:37,255 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:15:37,255 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:15:37,255 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:15:37,350 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:15:37,350 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:15:37,350 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:15:37,351 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:15:37,385 INFO server.py 298:: [Server] The aggregation takes 2.749105 seconds.
+
+2023-12-03 15:15:37,387 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:15:39,699 INFO server.py 210:: [Server] Test set: Average loss: 0.3784, Accuracy: 8656/10000 (86.56%)
+
+2023-12-03 15:15:39,701 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[796.,   2.,  25.,  32.,   9.,   4., 121.,   0.,  11.,   0.],
+        [  3., 974.,   0.,  14.,   4.,   0.,   3.,   0.,   2.,   0.],
+        [  9.,   1., 807.,  11., 103.,   0.,  63.,   0.,   6.,   0.],
+        [ 17.,  13.,  13., 886.,  37.,   0.,  32.,   0.,   2.,   0.],
+        [  0.,   2., 131.,  29., 762.,   0.,  71.,   0.,   5.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 962.,   0.,  24.,   1.,  12.],
+        [158.,   2., 110.,  27.,  89.,   0., 597.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  19.,   0., 957.,   0.,  24.],
+        [  0.,   1.,   4.,   2.,   7.,  10.,  10.,   3., 962.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  11.,   0.,  36.,   0., 953.]])
+2023-12-03 15:15:39,702 INFO server.py 229:: [Server] Precision=[0.809766   0.9788945  0.740367   0.8842315  0.7537092  0.9562624
+ 0.66555184 0.9382353  0.9562624  0.9626263 ],
+ Recall=[0.796 0.974 0.807 0.886 0.762 0.962 0.597 0.957 0.962 0.953],
+ F1-score=[0.80282396 0.9764411  0.77224874 0.88511485 0.757832   0.9591226
+ 0.6294149  0.9475247  0.9591226  0.95778894],
+ my_accuracy=86.55999898910522[%]
+2023-12-03 15:15:39,702 INFO _main.py 228:: ########EPOCH 26 ########
+2023-12-03 15:15:39,703 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:16:23,451 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:16:23,451 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:16:23,706 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:16:23,819 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:16:23,819 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:16:23,819 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:16:23,820 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:16:23,820 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:16:23,820 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:16:24,782 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:16:24,782 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 24, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 23, 7: 0, 8: 23, 9: 0, 10: 24, 11: 24, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 23, 18: 19, 19: 0, 20: 0, 21: 0, 22: 0, 23: 23, 24: 24, 25: 24, 26: 24, 27: 0, 28: 0, 29: 24, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:16:24,782 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:16:24,783 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:16:24,783 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:16:24,783 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:16:24,877 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:16:24,877 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:16:24,877 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:16:24,878 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:16:24,912 INFO server.py 298:: [Server] The aggregation takes 2.759737 seconds.
+
+2023-12-03 15:16:24,914 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:16:27,242 INFO server.py 210:: [Server] Test set: Average loss: 0.3795, Accuracy: 8670/10000 (86.7%)
+
+2023-12-03 15:16:27,243 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[774.,   3.,  23.,  32.,   9.,   4., 143.,   0.,  12.,   0.],
+        [  2., 975.,   0.,  14.,   4.,   0.,   3.,   0.,   2.,   0.],
+        [  9.,   1., 793.,  11., 114.,   0.,  66.,   0.,   6.,   0.],
+        [ 13.,  13.,  11., 885.,  37.,   0.,  39.,   0.,   2.,   0.],
+        [  0.,   2., 113.,  25., 795.,   0.,  63.,   0.,   2.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 957.,   0.,  28.,   1.,  13.],
+        [136.,   2., 103.,  29.,  99.,   0., 614.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  13.,   0., 970.,   0.,  17.],
+        [  1.,   1.,   4.,   2.,   7.,   9.,  11.,   3., 961.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  44.,   0., 946.]])
+2023-12-03 15:16:27,244 INFO server.py 229:: [Server] Precision=[0.8278075  0.9779338  0.7574021  0.8858859  0.74647886 0.96374625
+ 0.6538871  0.9282297  0.95812565 0.96827024],
+ Recall=[0.774 0.975 0.793 0.885 0.795 0.957 0.614 0.97  0.961 0.946],
+ F1-score=[0.8        0.97646475 0.7747923  0.8854427  0.76997584 0.96036124
+ 0.63331616 0.94865525 0.9595607  0.95700556],
+ my_accuracy=86.69999837875366[%]
+2023-12-03 15:16:27,245 INFO _main.py 228:: ########EPOCH 27 ########
+2023-12-03 15:16:27,245 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:17:10,952 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:17:10,952 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:17:11,207 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:17:11,318 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:17:11,319 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:17:11,319 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:17:11,320 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:17:11,320 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:17:11,320 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:17:12,280 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:17:12,281 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 25, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24, 7: 0, 8: 24, 9: 0, 10: 25, 11: 25, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 24, 18: 20, 19: 0, 20: 0, 21: 0, 22: 0, 23: 24, 24: 25, 25: 25, 26: 25, 27: 0, 28: 0, 29: 25, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:17:12,281 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:17:12,281 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:17:12,281 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:17:12,281 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:17:12,375 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:17:12,375 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:17:12,376 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:17:12,377 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:17:12,404 INFO server.py 298:: [Server] The aggregation takes 2.759871 seconds.
+
+2023-12-03 15:17:12,406 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:17:14,719 INFO server.py 210:: [Server] Test set: Average loss: 0.3732, Accuracy: 8671/10000 (86.71%)
+
+2023-12-03 15:17:14,720 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[780.,   2.,  20.,  37.,   9.,   4., 135.,   0.,  13.,   0.],
+        [  3., 971.,   1.,  17.,   4.,   0.,   2.,   0.,   2.,   0.],
+        [  9.,   1., 805.,  11., 106.,   0.,  62.,   0.,   6.,   0.],
+        [ 14.,   8.,  11., 892.,  38.,   0.,  35.,   0.,   2.,   0.],
+        [  0.,   2., 117.,  26., 782.,   0.,  70.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 965.,   0.,  20.,   1.,  13.],
+        [145.,   2., 108.,  31.,  95.,   0., 602.,   0.,  17.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  21.,   0., 955.,   0.,  24.],
+        [  0.,   1.,   6.,   3.,   6.,   9.,   8.,   3., 963.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  34.,   0., 956.]])
+2023-12-03 15:17:14,722 INFO server.py 229:: [Server] Precision=[0.8201893  0.98378927 0.7537453  0.8762279  0.7519231  0.95639247
+ 0.6586433  0.9436759  0.95630586 0.9617706 ],
+ Recall=[0.78  0.971 0.805 0.892 0.782 0.965 0.602 0.955 0.963 0.956],
+ F1-score=[0.79959    0.9773528  0.77852994 0.8840436  0.76666665 0.9606769
+ 0.6290491  0.9493041  0.9596413  0.95887655],
+ my_accuracy=86.71000003814697[%]
+2023-12-03 15:17:14,722 INFO _main.py 228:: ########EPOCH 28 ########
+2023-12-03 15:17:14,722 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:17:58,379 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:17:58,380 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:17:58,635 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:17:58,747 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:17:58,747 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:17:58,747 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:17:58,748 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:17:58,748 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:17:58,748 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:17:59,715 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:17:59,715 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 26, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 25, 7: 0, 8: 25, 9: 0, 10: 26, 11: 26, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 25, 18: 21, 19: 0, 20: 0, 21: 0, 22: 0, 23: 25, 24: 26, 25: 26, 26: 26, 27: 0, 28: 0, 29: 26, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:17:59,715 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:17:59,715 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:17:59,715 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:17:59,715 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:17:59,810 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:17:59,810 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:17:59,810 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:17:59,811 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:17:59,844 INFO server.py 298:: [Server] The aggregation takes 2.770710 seconds.
+
+2023-12-03 15:17:59,846 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:18:02,184 INFO server.py 210:: [Server] Test set: Average loss: 0.3756, Accuracy: 8688/10000 (86.88%)
+
+2023-12-03 15:18:02,185 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[778.,   2.,  21.,  35.,  10.,   4., 139.,   0.,  11.,   0.],
+        [  3., 972.,   1.,  16.,   4.,   0.,   2.,   0.,   2.,   0.],
+        [  9.,   1., 793.,  11., 114.,   0.,  66.,   0.,   6.,   0.],
+        [ 14.,  13.,  10., 889.,  36.,   0.,  36.,   0.,   2.,   0.],
+        [  1.,   2.,  91.,  31., 809.,   0.,  63.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 960.,   0.,  26.,   1.,  12.],
+        [140.,   2.,  99.,  29., 103.,   0., 612.,   0.,  15.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  16.,   0., 961.,   0.,  23.],
+        [  2.,   1.,   5.,   3.,   7.,   9.,   9.,   3., 960.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  36.,   0., 954.]])
+2023-12-03 15:18:02,186 INFO server.py 229:: [Server] Precision=[0.8215417  0.978852   0.777451   0.87586206 0.7469991  0.960961
+ 0.66019416 0.9366472  0.96       0.96363634],
+ Recall=[0.778 0.972 0.793 0.889 0.809 0.96  0.612 0.961 0.96  0.954],
+ F1-score=[0.79917824 0.97541404 0.7851485  0.8823821  0.7767643  0.9604803
+ 0.6351842  0.94866735 0.96       0.95879394],
+ my_accuracy=86.87999844551086[%]
+2023-12-03 15:18:02,187 INFO _main.py 228:: ########EPOCH 29 ########
+2023-12-03 15:18:02,187 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:18:46,036 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:18:46,037 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:18:46,290 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:18:46,402 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:18:46,403 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:18:46,403 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:18:46,404 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:18:46,404 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:18:46,404 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:18:47,355 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:18:47,356 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 27, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 26, 7: 0, 8: 26, 9: 0, 10: 27, 11: 27, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 26, 18: 22, 19: 0, 20: 0, 21: 0, 22: 0, 23: 26, 24: 27, 25: 27, 26: 27, 27: 0, 28: 0, 29: 27, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:18:47,356 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:18:47,356 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:18:47,356 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:18:47,356 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:18:47,450 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:18:47,450 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:18:47,450 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:18:47,451 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:18:47,479 INFO server.py 298:: [Server] The aggregation takes 2.744556 seconds.
+
+2023-12-03 15:18:47,482 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:18:49,803 INFO server.py 210:: [Server] Test set: Average loss: 0.3730, Accuracy: 8705/10000 (87.05%)
+
+2023-12-03 15:18:49,805 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[797.,   2.,  21.,  34.,   9.,   4., 122.,   0.,  11.,   0.],
+        [  3., 972.,   1.,  16.,   4.,   0.,   2.,   0.,   2.,   0.],
+        [  8.,   1., 805.,  11., 109.,   0.,  60.,   0.,   6.,   0.],
+        [ 16.,  10.,  11., 895.,  36.,   0.,  30.,   0.,   2.,   0.],
+        [  1.,   2., 101.,  27., 806.,   0.,  60.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 966.,   0.,  21.,   1.,  11.],
+        [152.,   2., 107.,  29., 106.,   0., 589.,   0.,  15.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  20.,   0., 959.,   0.,  21.],
+        [  2.,   1.,   6.,   3.,   7.,   7.,   7.,   3., 963.,   1.],
+        [  0.,   0.,   0.,   0.,   0.,  10.,   0.,  37.,   0., 953.]])
+2023-12-03 15:18:49,806 INFO server.py 229:: [Server] Precision=[0.81409603 0.9818182  0.76520914 0.8809055  0.7483751  0.959285
+ 0.6770115  0.9401961  0.96011966 0.96653146],
+ Recall=[0.797 0.972 0.805 0.895 0.806 0.966 0.589 0.959 0.963 0.953],
+ F1-score=[0.8054573  0.9768844  0.78460044 0.88789684 0.7761194  0.9626308
+ 0.62994653 0.9495049  0.9615577  0.95971805],
+ my_accuracy=87.05000281333923[%]
+2023-12-03 15:18:49,806 INFO _main.py 228:: ########EPOCH 30 ########
+2023-12-03 15:18:49,806 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:19:33,489 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:19:33,489 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:19:33,743 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:19:33,855 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:19:33,855 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:19:33,855 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:19:33,856 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:19:33,856 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:19:33,856 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:19:34,808 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:19:34,808 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 28, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 27, 7: 0, 8: 27, 9: 0, 10: 28, 11: 28, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 27, 18: 23, 19: 0, 20: 0, 21: 0, 22: 0, 23: 27, 24: 28, 25: 28, 26: 28, 27: 0, 28: 0, 29: 28, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:19:34,808 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:19:34,808 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:19:34,808 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:19:34,809 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:19:34,903 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:19:34,903 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:19:34,903 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:19:34,904 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:19:34,933 INFO server.py 298:: [Server] The aggregation takes 2.746864 seconds.
+
+2023-12-03 15:19:34,935 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:19:37,263 INFO server.py 210:: [Server] Test set: Average loss: 0.3703, Accuracy: 8714/10000 (87.14%)
+
+2023-12-03 15:19:37,264 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[805.,   3.,  21.,  33.,   9.,   4., 114.,   0.,  11.,   0.],
+        [  3., 974.,   1.,  14.,   4.,   0.,   2.,   0.,   2.,   0.],
+        [  8.,   1., 833.,  12.,  88.,   0.,  52.,   0.,   6.,   0.],
+        [ 18.,  13.,  12., 892.,  32.,   0.,  30.,   0.,   2.,   1.],
+        [  1.,   2., 128.,  32., 770.,   0.,  65.,   0.,   2.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 964.,   0.,  23.,   1.,  11.],
+        [158.,   1., 115.,  30.,  88.,   0., 594.,   0.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  17.,   0., 961.,   0.,  22.],
+        [  2.,   1.,   6.,   3.,   7.,   7.,   5.,   3., 965.,   1.],
+        [  0.,   0.,   1.,   0.,   0.,   9.,   0.,  34.,   0., 956.]])
+2023-12-03 15:19:37,265 INFO server.py 229:: [Server] Precision=[0.80904526 0.9788945  0.74574757 0.8770895  0.7715431  0.96303695
+ 0.68909514 0.9412341  0.9621137  0.96468216],
+ Recall=[0.805 0.974 0.833 0.892 0.77  0.964 0.594 0.961 0.965 0.956],
+ F1-score=[0.80701756 0.9764411  0.7869627  0.8844819  0.7707708  0.9635182
+ 0.6380236  0.9510144  0.9635547  0.9603214 ],
+ my_accuracy=87.1399998664856[%]
+2023-12-03 15:19:37,266 INFO _main.py 228:: ########EPOCH 31 ########
+2023-12-03 15:19:37,266 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:20:20,631 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:20:20,631 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:20:20,891 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:20:21,003 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:20:21,003 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:20:21,003 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:20:21,004 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:20:21,004 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:20:21,004 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:20:21,959 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:20:21,959 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 29, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 28, 7: 0, 8: 28, 9: 0, 10: 29, 11: 29, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 28, 18: 24, 19: 0, 20: 0, 21: 0, 22: 0, 23: 28, 24: 29, 25: 29, 26: 29, 27: 0, 28: 0, 29: 29, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:20:21,959 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:20:21,959 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:20:21,959 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:20:21,959 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:20:22,054 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:20:22,054 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:20:22,054 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:20:22,055 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:20:22,083 INFO server.py 298:: [Server] The aggregation takes 2.745931 seconds.
+
+2023-12-03 15:20:22,085 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:20:24,404 INFO server.py 210:: [Server] Test set: Average loss: 0.3692, Accuracy: 8724/10000 (87.24%)
+
+2023-12-03 15:20:24,405 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[793.,   2.,  19.,  28.,   9.,   4., 133.,   0.,  12.,   0.],
+        [  3., 972.,   1.,  16.,   4.,   0.,   2.,   0.,   2.,   0.],
+        [ 11.,   1., 801.,  11., 105.,   0.,  65.,   0.,   6.,   0.],
+        [ 15.,  10.,  10., 888.,  38.,   0.,  36.,   0.,   2.,   1.],
+        [  0.,   2.,  99.,  26., 806.,   0.,  63.,   0.,   4.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 965.,   0.,  22.,   1.,  11.],
+        [146.,   1.,  92.,  28., 101.,   0., 618.,   0.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  15.,   0., 967.,   0.,  18.],
+        [  1.,   1.,   6.,   3.,   6.,   7.,   7.,   4., 965.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,   9.,   0.,  41.,   0., 949.]])
+2023-12-03 15:20:24,407 INFO server.py 229:: [Server] Precision=[0.81836945 0.9828109  0.77842563 0.8871129  0.7539757  0.965
+ 0.66883117 0.9352031  0.95924455 0.9693565 ],
+ Recall=[0.793 0.972 0.801 0.888 0.806 0.965 0.618 0.967 0.965 0.949],
+ F1-score=[0.80548507 0.9773756  0.78955156 0.88755625 0.7791204  0.965
+ 0.64241165 0.9508358  0.9621137  0.95907027],
+ my_accuracy=87.23999857902527[%]
+2023-12-03 15:20:24,407 INFO _main.py 228:: ########EPOCH 32 ########
+2023-12-03 15:20:24,407 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:21:08,083 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:21:08,083 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:21:08,339 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:21:08,451 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:21:08,451 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:21:08,451 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:21:08,452 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:21:08,452 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:21:08,452 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:21:09,398 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:21:09,398 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 30, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 29, 7: 0, 8: 29, 9: 0, 10: 30, 11: 30, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 29, 18: 25, 19: 0, 20: 0, 21: 0, 22: 0, 23: 29, 24: 30, 25: 30, 26: 30, 27: 0, 28: 0, 29: 30, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:21:09,398 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:21:09,398 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:21:09,398 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:21:09,398 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:21:09,492 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:21:09,493 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:21:09,493 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:21:09,494 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:21:09,522 INFO server.py 298:: [Server] The aggregation takes 2.737729 seconds.
+
+2023-12-03 15:21:09,524 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:21:11,852 INFO server.py 210:: [Server] Test set: Average loss: 0.3706, Accuracy: 8747/10000 (87.47%)
+
+2023-12-03 15:21:11,854 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[841.,   3.,  18.,  29.,   9.,   4.,  85.,   0.,  11.,   0.],
+        [  3., 973.,   1.,  16.,   4.,   0.,   1.,   0.,   2.,   0.],
+        [ 13.,   1., 816.,  12.,  96.,   0.,  56.,   0.,   6.,   0.],
+        [ 20.,   9.,  10., 893.,  38.,   0.,  27.,   0.,   2.,   1.],
+        [  2.,   2., 103.,  31., 797.,   0.,  62.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 963.,   0.,  25.,   1.,  10.],
+        [168.,   1., 113.,  31.,  94.,   0., 578.,   0.,  15.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  15.,   0., 968.,   0.,  17.],
+        [  1.,   1.,   7.,   3.,   6.,   5.,   6.,   4., 967.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  10.,   0.,  38.,   0., 951.]])
+2023-12-03 15:21:11,855 INFO server.py 229:: [Server] Precision=[0.80248094 0.98282826 0.7633302  0.878937   0.76341    0.9658977
+ 0.70920247 0.9352657  0.96027803 0.97139937],
+ Recall=[0.841 0.973 0.816 0.893 0.797 0.963 0.578 0.968 0.967 0.951],
+ F1-score=[0.821289   0.9778895  0.7887869  0.8859127  0.7798434  0.96444666
+ 0.6369146  0.95135134 0.9636273  0.96109146],
+ my_accuracy=87.47000098228455[%]
+2023-12-03 15:21:11,855 INFO _main.py 228:: ########EPOCH 33 ########
+2023-12-03 15:21:11,856 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:21:55,375 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:21:55,375 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:21:55,630 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:21:55,742 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:21:55,743 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:21:55,743 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:21:55,744 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:21:55,744 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:21:55,744 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:21:56,692 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:21:56,692 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 31, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 30, 7: 0, 8: 30, 9: 0, 10: 31, 11: 31, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 30, 18: 26, 19: 0, 20: 0, 21: 0, 22: 0, 23: 30, 24: 31, 25: 31, 26: 31, 27: 0, 28: 0, 29: 31, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:21:56,692 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:21:56,692 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:21:56,692 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:21:56,692 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:21:56,787 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:21:56,787 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:21:56,787 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:21:56,788 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:21:56,816 INFO server.py 298:: [Server] The aggregation takes 2.737698 seconds.
+
+2023-12-03 15:21:56,818 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:21:59,131 INFO server.py 210:: [Server] Test set: Average loss: 0.3680, Accuracy: 8740/10000 (87.4%)
+
+2023-12-03 15:21:59,133 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[770.,   2.,  19.,  29.,   8.,   4., 157.,   0.,  11.,   0.],
+        [  3., 976.,   1.,  15.,   2.,   0.,   1.,   0.,   2.,   0.],
+        [  8.,   1., 832.,  12.,  85.,   0.,  56.,   0.,   6.,   0.],
+        [ 13.,  10.,  11., 896.,  34.,   0.,  33.,   0.,   2.,   1.],
+        [  0.,   2., 113.,  34., 784.,   0.,  65.,   0.,   2.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 966.,   0.,  22.,   1.,  10.],
+        [119.,   1., 108.,  32.,  90.,   0., 636.,   0.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  18.,   0., 962.,   0.,  20.],
+        [  1.,   1.,   6.,   3.,   6.,   7.,   6.,   4., 966.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  11.,   0.,  36.,   0., 952.]])
+2023-12-03 15:21:59,134 INFO server.py 229:: [Server] Precision=[0.84245074 0.9828802  0.7626031  0.8767123  0.7770069  0.9602386
+ 0.6666667  0.9394531  0.9621514  0.9684639 ],
+ Recall=[0.77  0.976 0.832 0.896 0.784 0.966 0.636 0.962 0.966 0.952],
+ F1-score=[0.8045977  0.979428   0.7957915  0.8862513  0.7804878  0.96311074
+ 0.65097237 0.95059294 0.9640719  0.9601614 ],
+ my_accuracy=87.40000128746033[%]
+2023-12-03 15:21:59,134 INFO _main.py 228:: ########EPOCH 34 ########
+2023-12-03 15:21:59,134 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:22:42,707 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:22:42,708 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:22:42,963 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:22:43,075 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:22:43,075 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:22:43,075 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:22:43,076 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:22:43,076 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:22:43,076 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:22:44,024 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:22:44,025 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 32, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 31, 7: 0, 8: 31, 9: 0, 10: 32, 11: 32, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 31, 18: 27, 19: 0, 20: 0, 21: 0, 22: 0, 23: 31, 24: 32, 25: 32, 26: 32, 27: 0, 28: 0, 29: 32, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:22:44,025 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:22:44,025 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:22:44,025 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:22:44,025 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:22:44,119 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:22:44,119 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:22:44,119 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:22:44,120 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:22:44,153 INFO server.py 298:: [Server] The aggregation takes 2.748716 seconds.
+
+2023-12-03 15:22:44,155 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:22:46,474 INFO server.py 210:: [Server] Test set: Average loss: 0.3654, Accuracy: 8753/10000 (87.53%)
+
+2023-12-03 15:22:46,476 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[806.,   3.,  21.,  27.,  10.,   3., 119.,   0.,  11.,   0.],
+        [  2., 976.,   1.,  15.,   3.,   0.,   1.,   0.,   2.,   0.],
+        [ 11.,   1., 813.,  12.,  99.,   0.,  58.,   0.,   6.,   0.],
+        [ 17.,  11.,  10., 891.,  38.,   0.,  30.,   0.,   2.,   1.],
+        [  3.,   2.,  93.,  25., 810.,   0.,  64.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 963.,   0.,  25.,   1.,  10.],
+        [154.,   1., 102.,  27.,  96.,   0., 606.,   0.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  14.,   0., 967.,   0.,  19.],
+        [  0.,   1.,   7.,   3.,   6.,   5.,   6.,   4., 968.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  10.,   0.,  36.,   0., 953.]])
+2023-12-03 15:22:46,477 INFO server.py 229:: [Server] Precision=[0.81168175 0.9809045  0.77576333 0.8901099  0.7627119  0.9678392
+ 0.68552035 0.93701553 0.9612711  0.96948117],
+ Recall=[0.806 0.976 0.813 0.891 0.81  0.963 0.606 0.967 0.968 0.953],
+ F1-score=[0.80883086 0.9784461  0.79394525 0.8905547  0.78564495 0.9654135
+ 0.6433121  0.9517717  0.9646238  0.96116996],
+ my_accuracy=87.52999901771545[%]
+2023-12-03 15:22:46,477 INFO _main.py 228:: ########EPOCH 35 ########
+2023-12-03 15:22:46,478 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:23:30,344 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:23:30,344 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:23:30,597 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:23:30,711 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:23:30,712 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:23:30,712 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:23:30,713 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:23:30,713 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:23:30,713 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:23:31,668 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:23:31,669 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 33, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 32, 7: 0, 8: 32, 9: 0, 10: 33, 11: 33, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 32, 18: 28, 19: 0, 20: 0, 21: 0, 22: 0, 23: 32, 24: 33, 25: 33, 26: 33, 27: 0, 28: 0, 29: 33, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:23:31,669 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:23:31,669 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:23:31,669 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:23:31,669 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:23:31,763 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:23:31,763 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:23:31,763 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:23:31,764 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:23:31,797 INFO server.py 298:: [Server] The aggregation takes 2.756418 seconds.
+
+2023-12-03 15:23:31,799 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:23:34,131 INFO server.py 210:: [Server] Test set: Average loss: 0.3646, Accuracy: 8768/10000 (87.68%)
+
+2023-12-03 15:23:34,132 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[805.,   3.,  19.,  29.,   7.,   5., 121.,   0.,  11.,   0.],
+        [  2., 975.,   1.,  17.,   2.,   0.,   1.,   0.,   2.,   0.],
+        [  9.,   1., 839.,  13.,  79.,   0.,  53.,   0.,   6.,   0.],
+        [ 16.,   7.,  10., 904.,  31.,   0.,  29.,   0.,   2.,   1.],
+        [  3.,   2., 109.,  30., 788.,   0.,  65.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 966.,   0.,  22.,   1.,  10.],
+        [146.,   1., 108.,  33.,  91.,   0., 605.,   0.,  16.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  14.,   0., 964.,   0.,  22.],
+        [  0.,   1.,   8.,   4.,   5.,   5.,   5.,   4., 968.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  10.,   0.,  35.,   0., 954.]])
+2023-12-03 15:23:34,134 INFO server.py 229:: [Server] Precision=[0.8205912  0.9848485  0.76621    0.8768186  0.78564304 0.966
+ 0.68828213 0.9404878  0.9593657  0.9665654 ],
+ Recall=[0.805 0.975 0.839 0.904 0.788 0.966 0.605 0.964 0.968 0.954],
+ F1-score=[0.8127208  0.9798995  0.80095464 0.89020187 0.78681976 0.966
+ 0.6439596  0.9520987  0.96366346 0.96024156],
+ my_accuracy=87.6800000667572[%]
+2023-12-03 15:23:34,134 INFO _main.py 228:: ########EPOCH 36 ########
+2023-12-03 15:23:34,134 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:24:17,792 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:24:17,792 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:24:18,047 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:24:18,159 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:24:18,159 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:24:18,159 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:24:18,160 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:24:18,160 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:24:18,160 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:24:19,104 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:24:19,104 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 34, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 33, 7: 0, 8: 33, 9: 0, 10: 34, 11: 34, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 33, 18: 29, 19: 0, 20: 0, 21: 0, 22: 0, 23: 33, 24: 34, 25: 34, 26: 34, 27: 0, 28: 0, 29: 34, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:24:19,104 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:24:19,104 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:24:19,104 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:24:19,104 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:24:19,199 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:24:19,199 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:24:19,199 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:24:19,200 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:24:19,228 INFO server.py 298:: [Server] The aggregation takes 2.736907 seconds.
+
+2023-12-03 15:24:19,230 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:24:21,562 INFO server.py 210:: [Server] Test set: Average loss: 0.3645, Accuracy: 8772/10000 (87.72%)
+
+2023-12-03 15:24:21,563 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[797.,   4.,  18.,  27.,  10.,   3., 131.,   0.,  10.,   0.],
+        [  2., 974.,   1.,  16.,   3.,   0.,   2.,   0.,   2.,   0.],
+        [  9.,   1., 827.,  11.,  90.,   0.,  56.,   0.,   6.,   0.],
+        [ 17.,   7.,  10., 895.,  40.,   0.,  28.,   0.,   2.,   1.],
+        [  2.,   2.,  99.,  26., 803.,   0.,  66.,   0.,   2.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 968.,   0.,  20.,   1.,  10.],
+        [135.,   1., 100.,  28., 103.,   0., 619.,   0.,  14.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  15.,   0., 965.,   0.,  20.],
+        [  0.,   1.,   8.,   4.,   5.,   5.,   6.,   4., 967.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,   9.,   0.,  33.,   0., 957.]])
+2023-12-03 15:24:21,564 INFO server.py 229:: [Server] Precision=[0.82848233 0.9838384  0.77725565 0.88789684 0.7618596  0.968
+ 0.68171805 0.944227   0.9631474  0.96862346],
+ Recall=[0.797 0.974 0.827 0.895 0.803 0.968 0.619 0.965 0.967 0.957],
+ F1-score=[0.81243634 0.9788945  0.8013566  0.8914343  0.78188896 0.968
+ 0.648847   0.9545005  0.96506983 0.9627767 ],
+ my_accuracy=87.72000074386597[%]
+2023-12-03 15:24:21,565 INFO _main.py 228:: ########EPOCH 37 ########
+2023-12-03 15:24:21,565 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:25:05,373 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:25:05,373 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:25:05,647 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:25:05,758 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:25:05,759 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:25:05,759 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:25:05,760 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:25:05,760 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:25:05,760 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:25:06,708 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:25:06,708 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 35, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34, 7: 0, 8: 34, 9: 0, 10: 35, 11: 35, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 34, 18: 30, 19: 0, 20: 0, 21: 0, 22: 0, 23: 34, 24: 35, 25: 35, 26: 35, 27: 0, 28: 0, 29: 35, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:25:06,709 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:25:06,709 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:25:06,709 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:25:06,709 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:25:06,803 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:25:06,803 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:25:06,803 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:25:06,804 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:25:06,837 INFO server.py 298:: [Server] The aggregation takes 2.758985 seconds.
+
+2023-12-03 15:25:06,839 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:25:09,156 INFO server.py 210:: [Server] Test set: Average loss: 0.3689, Accuracy: 8775/10000 (87.75%)
+
+2023-12-03 15:25:09,158 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[802.,   4.,  20.,  30.,   8.,   3., 122.,   0.,  11.,   0.],
+        [  3., 977.,   1.,  14.,   2.,   0.,   1.,   0.,   2.,   0.],
+        [  8.,   1., 843.,  12.,  77.,   0.,  53.,   0.,   6.,   0.],
+        [ 13.,  10.,  10., 899.,  35.,   0.,  30.,   0.,   2.,   1.],
+        [  2.,   2., 106.,  30., 795.,   0.,  62.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 964.,   0.,  24.,   1.,  10.],
+        [138.,   1., 112.,  31.,  93.,   0., 610.,   0.,  15.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  13.,   0., 970.,   0.,  17.],
+        [  0.,   1.,   8.,   4.,   5.,   5.,   7.,   4., 966.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,   9.,   0.,  41.,   0., 949.]])
+2023-12-03 15:25:09,159 INFO server.py 229:: [Server] Precision=[0.83022773 0.9809237  0.76566756 0.8805093  0.7832512  0.9698189
+ 0.68926555 0.93359    0.9602386  0.97134084],
+ Recall=[0.802 0.977 0.843 0.899 0.795 0.964 0.61  0.97  0.966 0.949],
+ F1-score=[0.8158698  0.97895795 0.802475   0.8896586  0.7890819  0.9669007
+ 0.64721483 0.95144683 0.96311074 0.9600405 ],
+ my_accuracy=87.74999976158142[%]
+2023-12-03 15:25:09,159 INFO _main.py 228:: ########EPOCH 38 ########
+2023-12-03 15:25:09,159 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:25:52,884 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:25:52,884 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:25:53,139 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:25:53,251 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:25:53,251 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:25:53,251 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:25:53,252 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:25:53,252 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:25:53,252 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:25:54,179 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:25:54,180 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 36, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 35, 7: 0, 8: 35, 9: 0, 10: 36, 11: 36, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 35, 18: 31, 19: 0, 20: 0, 21: 0, 22: 0, 23: 35, 24: 36, 25: 36, 26: 36, 27: 0, 28: 0, 29: 36, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:25:54,180 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:25:54,180 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:25:54,180 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:25:54,180 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:25:54,274 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:25:54,275 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:25:54,275 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:25:54,276 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:25:54,304 INFO server.py 298:: [Server] The aggregation takes 2.728049 seconds.
+
+2023-12-03 15:25:54,306 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:25:56,635 INFO server.py 210:: [Server] Test set: Average loss: 0.3679, Accuracy: 8773/10000 (87.73%)
+
+2023-12-03 15:25:56,637 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[780.,   3.,  22.,  27.,  10.,   3., 144.,   0.,  11.,   0.],
+        [  2., 976.,   1.,  15.,   2.,   0.,   2.,   0.,   2.,   0.],
+        [  6.,   1., 829.,  11.,  94.,   0.,  53.,   0.,   6.,   0.],
+        [ 15.,   7.,  10., 892.,  42.,   0.,  31.,   0.,   2.,   1.],
+        [  1.,   2.,  90.,  28., 819.,   0.,  57.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 971.,   0.,  19.,   1.,   8.],
+        [120.,   1., 109.,  30., 105.,   0., 619.,   0.,  16.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  15.,   0., 966.,   0.,  19.],
+        [  0.,   1.,   8.,   4.,   5.,   5.,   5.,   4., 968.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  11.,   0.,  35.,   0., 953.]])
+2023-12-03 15:25:56,638 INFO server.py 229:: [Server] Precision=[0.84415585 0.98486376 0.7747663  0.88492066 0.76044565 0.9661692
+ 0.6794731  0.9433594  0.9593657  0.9714577 ],
+ Recall=[0.78  0.976 0.829 0.892 0.819 0.971 0.619 0.966 0.968 0.953],
+ F1-score=[0.81081086 0.9804118  0.8009662  0.8884463  0.78863746 0.9685786
+ 0.64782834 0.95454544 0.96366346 0.9621403 ],
+ my_accuracy=87.73000240325928[%]
+2023-12-03 15:25:56,638 INFO _main.py 228:: ########EPOCH 39 ########
+2023-12-03 15:25:56,639 INFO _main.py 229:: ###Model distribution###
+2023-12-03 15:26:40,424 INFO server.py 553:: flip_sign_id={0, 18, 10, 11}
+2023-12-03 15:26:40,425 INFO server.py 568:: ===========using shortHoGs for detecting UNTARGETED ATTACK====
+2023-12-03 15:26:40,683 INFO server.py 594:: labels cluster_sh= [ 0  0  0  0  0  0 -1  0  0  0  0  0  0  0  0  0  0  0  0  0 -1 -1 -1  0
+  0  0  0  0  0  0  0  0  0  0  0  0]
+2023-12-03 15:26:40,795 DEBUG server.py 599:: offset_normal_ids=[ 0  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 23 24 25 26 27
+ 28 29 30 31 32 33 34 35], normal_ids=[ 1  2  3  4  5  6  8  9 12 13 14 15 16 17 19 20 21 22 23 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+2023-12-03 15:26:40,795 INFO server.py 604:: SUSPECTED UNTARGETED [ 7 24 25 26]
+2023-12-03 15:26:40,795 DEBUG server.py 608:: suspicious_ids=[7, 24, 25, 26]
+2023-12-03 15:26:40,796 DEBUG server.py 617:: d_normal_sus={7: 1.8999746, 24: 2.4017577, 25: 2.4597373, 26: 2.4563646}, d_separate=2.150866150856018
+2023-12-03 15:26:40,796 INFO server.py 624:: This round UNTARGETED={24, 25, 26}, sus_tAtk_uRel_id0={7}
+2023-12-03 15:26:40,796 INFO server.py 642:: =======Using Modified LONG HOGs for detecting TARGETED ATTACK========
+2023-12-03 15:26:41,743 INFO server.py 118:: This round TARGETED ATTACK: [ 6  8 17 23 29]
+2023-12-03 15:26:41,743 DEBUG server.py 487:: mal_ids={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}, pre_mal_id=defaultdict(<class 'int'>, {0: 37, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 36, 7: 0, 8: 36, 9: 0, 10: 37, 11: 37, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 36, 18: 32, 19: 0, 20: 0, 21: 0, 22: 0, 23: 36, 24: 37, 25: 37, 26: 37, 27: 0, 28: 0, 29: 37, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0})
+2023-12-03 15:26:41,743 INFO server.py 489:: FLIP-SIGN ATTACK={0, 18, 10, 11}
+2023-12-03 15:26:41,743 INFO server.py 490:: UNTARGETED ATTACK={24, 25, 26}
+2023-12-03 15:26:41,744 INFO server.py 491:: TARGETED ATTACK={6, 8, 17, 23, 29}
+2023-12-03 15:26:41,744 INFO server.py 647:: OVERTIME MALICIOUS client ids ={0, 6, 8, 10, 11, 17, 18, 23, 24, 25, 26, 29}
+2023-12-03 15:26:41,838 INFO server.py 693:: This round UNRELIABLE={2, 20, 14}, normal_id={1, 3, 4, 5, 7, 9, 12, 13, 15, 16, 19, 21, 22, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39}
+2023-12-03 15:26:41,838 DEBUG server.py 695:: anlge_sHoGs={1: 0.52777135, 2: 0.09524524, 3: 0.2978573, 4: 0.4462283, 5: 0.5567688, 7: 0.50434506, 9: 0.54187185, 12: 0.38665238, 13: 0.48160776, 14: 0.1783285, 15: 0.37483385, 16: 0.5274913, 19: 0.51789224, 20: 0.11420347, 21: 0.46411395, 22: 0.37387544, 27: 0.48544618, 28: 0.65561813, 30: 0.2789764, 31: 0.51622003, 32: 0.42188713, 33: 0.6436431, 34: 0.47034553, 35: 0.30525312, 36: 0.5309917, 37: 0.3912069, 38: 0.5361025, 39: 0.5181028}, angle_sep_nsH=0.2286524549126625
+2023-12-03 15:26:41,838 INFO server.py 707:: UNRELIABLE clients ={2, 20, 14}
+2023-12-03 15:26:41,839 INFO server.py 728:: clients' sizes=[12, 4, 16, 9, 18, 27, 10, 8, 14, 6, 9, 10, 15, 10, 10, 9, 10, 22, 11, 17, 10, 13, 10, 8, 16, 6, 10, 11], total=331
+2023-12-03 15:26:41,867 INFO server.py 298:: [Server] The aggregation takes 2.741783 seconds.
+
+2023-12-03 15:26:41,870 INFO server.py 186:: [Server] Start testing
+2023-12-03 15:26:44,200 INFO server.py 210:: [Server] Test set: Average loss: 0.3695, Accuracy: 8779/10000 (87.79%)
+
+2023-12-03 15:26:44,202 INFO server.py 213:: [Sever] Confusion matrix:
+ tensor([[799.,   3.,  21.,  30.,   9.,   4., 123.,   0.,  11.,   0.],
+        [  3., 974.,   1.,  16.,   2.,   0.,   2.,   0.,   2.,   0.],
+        [  8.,   1., 847.,  13.,  72.,   0.,  53.,   0.,   6.,   0.],
+        [ 13.,   7.,  12., 903.,  34.,   0.,  28.,   0.,   2.,   1.],
+        [  3.,   2., 113.,  32., 781.,   0.,  66.,   0.,   3.,   0.],
+        [  0.,   0.,   0.,   1.,   0., 970.,   0.,  19.,   1.,   9.],
+        [136.,   1., 113.,  32.,  87.,   0., 615.,   0.,  16.,   0.],
+        [  0.,   0.,   0.,   0.,   0.,  13.,   0., 969.,   0.,  18.],
+        [  0.,   1.,   8.,   4.,   5.,   5.,   5.,   4., 968.,   0.],
+        [  0.,   0.,   1.,   0.,   0.,  10.,   0.,  36.,   0., 953.]])
+2023-12-03 15:26:44,203 INFO server.py 229:: [Server] Precision=[0.83056134 0.9848332  0.75896055 0.8758487  0.7888889  0.9680639
+ 0.6894619  0.942607   0.9593657  0.9714577 ],
+ Recall=[0.799 0.974 0.847 0.903 0.781 0.97  0.615 0.969 0.968 0.953],
+ F1-score=[0.814475   0.9793866  0.8005671  0.8892172  0.7849247  0.96903104
+ 0.6501057  0.95562124 0.96366346 0.9621403 ],
+ my_accuracy=87.79000043869019[%]
