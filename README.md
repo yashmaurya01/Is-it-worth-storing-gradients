@@ -5,4 +5,4 @@ Steps on how to reproduce the result
 
 2)Run the notebook to create the csv
 
-3) Use FL_report_vis.ipynb to create visualisations and reproduce the findings
+3)Use FL_report_vis.ipynb to create visualisations and reproduce the findings
